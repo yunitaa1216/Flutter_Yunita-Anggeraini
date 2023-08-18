@@ -35,5 +35,6 @@ Pada pengembangan sebuah software pertama memerlukan bahasa pemrograman yang mer
 - Android pengembangannya bersifat open source dan berjalan pada sistem operasi android (bahasa pemoragraman yang digunakan java, kotlin)
 
 7. Tahapan pengembangan aplikasi menggunakan bahasa dart
+   
 Dart dapat digunakan untuk pengembangan aplikasi android dan Ios.
 bahasa dart + framework flutter kemudian melalui proses compiler (Andoid/iod sdk) setelah itu menghasilkan machine kode (dengan format .apk untuk android/.ipa untuk iOS) lalu akan menghasilkan output aplikasi nya.
