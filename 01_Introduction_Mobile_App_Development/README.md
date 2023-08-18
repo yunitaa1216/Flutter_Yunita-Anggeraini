@@ -20,14 +20,20 @@ Pada pengembangan sebuah software pertama memerlukan bahasa pemrograman yang mer
 7. Perbedaan compiler dan interpreter
    
    - Compiler
-     a. bahasa pemograman menghasilkan source code kemudia compiler mengubah kode tersebut menjadi bahasa lain atau menjadi bentuk yang dapat    
+     
+     a. bahasa pemograman menghasilkan source code kemudian compiler mengubah kode tersebut menjadi bahasa lain atau menjadi bentuk yang dapat    
         dipahami oleh komputer
+     
      b. memerlukan proses yang lebih panjang (bahasa pemrograman -> compiler -> machine code -> output)
+     
      c. program dapat dijalankan dengan cepat
 
    - Interpreter
+     
      a. membaca kode dari bahasa pemrograman tanpa mengubahnya ke bentuk lain
+     
      b. prosesnya lebih singkat (bahasa pemrograman -> interpreter -> output)
+     
      c. prosesnya lebih lambat (kode dijalankan baris per baris)
 
 6. Proses pengembangan aplikasi untuk perangkat mobile
