@@ -1,19 +1,24 @@
 Resume - Introduction Mobile App Development
 1. Pengertian Mobile App Development
+
 Mobile App Development merupakan proses pengembangan aplikasi mobile  dengan melakukan proses desain, pembuatan aplikasi, testing, dan peluncuran aplikasi.
 
 2. Pengertian software
+
 Software adalah sebuah perangkat lunak (baik mobile maupun dekstop) yang terbentuk dari perintah-perintah yang tersimpan dan dapat dikendalikan pada sistem komputer.
 
 3. Jenis-jenis software
+   
    - web (memerlukan internet untuk mengaksesnya)
    - dekstop (memerlukan proses instalasi sebelum digunakan)
    - mobile (memerlukan proses instalasi dan dapat digunakan pada smartphone atau tablet)
 
 5. Pengembangan software
+   
 Pada pengembangan sebuah software pertama memerlukan bahasa pemrograman yang merupakan teks untuk memberikan perintah pada komputer. Kemudian terdapat proses compiler atau interpreter yang digunakan untuk memproses bahasa pemrograman agar lebih mudah dikenali oleh komputer.
 
-6. Perbedaan compiler dan interpreter
+7. Perbedaan compiler dan interpreter
+   
    - Compiler
      a. bahasa pemograman menghasilkan source code kemudia compiler mengubah kode tersebut menjadi bahasa lain atau menjadi bentuk yang dapat    
         dipahami oleh komputer
