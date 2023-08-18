@@ -19,22 +19,14 @@ Pada pengembangan sebuah software pertama memerlukan bahasa pemrograman yang mer
 
 7. Perbedaan compiler dan interpreter
    
-   - Compiler
-     
-     a. bahasa pemograman menghasilkan source code kemudian compiler mengubah kode tersebut menjadi bahasa lain atau menjadi bentuk yang dapat    
-        dipahami oleh komputer
-     
-     b. memerlukan proses yang lebih panjang (bahasa pemrograman -> compiler -> machine code -> output)
-     
-     c. program dapat dijalankan dengan cepat
+   - Compiler,
+     bahasa pemrograman menghasilkan source code kemudian compiler mengubah kode tersebut menjadi bahasa lain atau menjadi bentuk yang dapat    
+     dipahami oleh komputer, memerlukan proses yang lebih panjang (bahasa pemrograman -> compiler -> machine code -> output) dan program dapat    
+     dijalankan dengan cepat
 
-   - Interpreter
-     
-     a. membaca kode dari bahasa pemrograman tanpa mengubahnya ke bentuk lain
-     
-     b. prosesnya lebih singkat (bahasa pemrograman -> interpreter -> output)
-     
-     c. prosesnya lebih lambat (kode dijalankan baris per baris)
+   - Interpreter,
+     membaca kode dari bahasa pemrograman tanpa mengubahnya ke bentuk lain, prosesnya lebih singkat (bahasa pemrograman -> interpreter -> output)
+     dan prosesnya lebih lambat (kode dijalankan baris per baris)
 
 6. Proses pengembangan aplikasi untuk perangkat mobile
 - iOS dikembangkan oleh apple dan berjalan pada sistem operasi iOS (Bahasa pemrograman yang digunakan swift dan objective c)
