@@ -1,0 +1,20 @@
+1.	Tuliskan 5 bahasa pemrograman untuk membuat aplikasi Mobile(contoh: C# untuk Desktop Windows)
+Jawaban:
+A.	Bahasa Pemrograman Java
+Java merupakan bahasa pemrograman yang dapat digunakan untuk pengembangan aplikasi dekstop dan mobile.
+B.	Bahasa Pemrograman Kotlin
+Kotlin merupakan bahasa pemrograman yang digunakan untuk pengembangan aplikasi android.
+C.	Dart
+Dart merupakan bahasa pemrograman yang dikembangkan oleh google untuk pengembangan aplikasi mobile menggunakan framework flutter.
+D.	Swift
+Swift merupakan bahasa yang digunakan untuk pengembangan aplikasi iOS.
+E.	Javascript
+Javascript merupakan bahasa yang dapat digunakan untuk pengembangan aplikasi mobile dengan menggunakan framework React Native.
+
+2.	Cari dan tuliskan 5 aplikasi yang berjalan pada sistem operasi Android namun tidak pada sistem operasi iOS
+Jawaban:
+1.	Wifi Analyzer adalah aplikasi yang digunakan untuk menampilkan seberapa kuat jaringan WiFi yang ada disekitar user.
+2.	BetterBatteryStats adalah aplikasi yang berfungsi untuk menganalisis aplikasi apa saja yang menyedot daya baterai paling banyak.
+3.	APP Lock digunakan untuk melindungi aplikasi yang ada di smartphone android menggunakan kata sandi.
+4.	Friday adalah aplikasi yang digunakan untuk membuat pengingat pada kegiatan yang sudah dilakukan dan mencatat aktivitas favorit user.
+5.	Tasker adalah aplikasi yang memungkinkan pengguna melakukan tweak terhadap beberapa fitur ponsel misalnya menyalakan lampu flash jika ada pesan.
