@@ -10,11 +10,12 @@ double jumlah_pembelian(double buku, double pensil, double tas){
   return buku + pensil + tas;
 }
 
-////no 2
+//no 2
 double totalDiskon(double total_pembelian, double diskon){
   return total_pembelian * diskon;
 }
 
+//no 3
 double totalsetelahdiskon(double total_pembelian, double diskon){
   double JumlahDiskon = totalDiskon(total_pembelian, diskon);
   return total_pembelian - JumlahDiskon;
