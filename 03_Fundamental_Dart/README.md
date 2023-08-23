@@ -3,7 +3,8 @@
 
 ### Program dart sederhana
 void main() { //fungsi yang memiliki tipe data void dengan nama main
-  print('program dart sederhana'); //perintah print untuk menampilkan data
+
+print('program dart sederhana'); //perintah print untuk menampilkan data
 }
 
 ### Komentar
