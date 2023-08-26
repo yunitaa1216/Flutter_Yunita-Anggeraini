@@ -13,7 +13,6 @@ double kelilingpersegipanjang = 2 * (panjangp + lebarp);
 double luaspersegipanjang = panjangp * lebarp;
 
 // Keliling dan luas lingkaran
-//Keliling dan luas lingkaran
 double phi = 3.14;
 int jarijari = 6;
 double kelilinglingkaran = 2 * phi * jarijari;
