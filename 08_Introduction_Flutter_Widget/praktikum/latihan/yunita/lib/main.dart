@@ -143,7 +143,7 @@ class MyApp extends StatelessWidget {
         body: Center(
           child: Text('Material'),
         ),
-        drawer: Drawer(
+         drawer: Drawer(
           child: ListView(
             children: [
               DrawerHeader(
@@ -158,12 +158,39 @@ class MyApp extends StatelessWidget {
               ListTile(
                 title: Text('Item 2'),
               ),
-        
             ],
           ),
         ),
+        bottomNavigationBar: BottomNavigationBar(
+  type: BottomNavigationBarType.fixed,
+  items: <BottomNavigationBarItem>[
+    BottomNavigationBarItem(
+      icon: Ink(
+        decoration: BoxDecoration(
+          color: Colors.green, // Warna latar belakang hijau
+          borderRadius: BorderRadius.circular(20.0), // Bentuk oval
+        ),
+        child: InkWell(
+          child: Padding(
+            padding: EdgeInsets.all(10.0),
+            child: Icon(
+              Icons.abc_outlined, // Menggunakan ikon Icons.verified_user
+              color: Colors.white, // Warna ikon putih
+            ),
+          ),
+        ),
       ),
-    );
+      label: 'verified user',
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.abc_outlined), // Icon tanpa latar belakang
+      label: 'verified user',
+    ),
+  ],
+  selectedLabelStyle: TextStyle(color: Colors.black), // Warna teks teks yang dipilih
+  unselectedLabelStyle: TextStyle(color: Colors.black),
+),
+        ));
   }
 }
 
