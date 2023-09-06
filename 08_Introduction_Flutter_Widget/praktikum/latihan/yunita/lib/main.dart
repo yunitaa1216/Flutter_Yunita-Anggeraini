@@ -125,39 +125,47 @@
 // }
 
 
-//Tess
-// import 'package:flutter/material.dart';
+// Tess
+import 'package:flutter/material.dart';
 
-// void main() {
-//   runApp(MyApp());
-// }
+void main() {
+  runApp(MyApp());
+}
 
-// class MyApp extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       title: 'Flutter Material',
-//       theme: ThemeData(
-//         primarySwatch: Colors.blue, // Warna utama
-//       ),
-//       home: MyHomePage(),
-//     );
-//   }
-// }
-
-// class MyHomePage extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: Text('Material App'),
-//       ),
-//       body: Center(
-//         child: Text('Tes Material App'),
-//       ),
-//     );
-//   }
-// }
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Yunita App'),
+        ),
+        body: Center(
+          child: Text('Material'),
+        ),
+        drawer: Drawer(
+          child: ListView(
+            children: [
+              DrawerHeader(
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 121, 175, 220), // Warna latar belakang header
+                ),
+                child: Text('Drawer Widget'),
+              ),
+              ListTile(
+                title: Text('Item 1'),
+              ),
+              ListTile(
+                title: Text('Item 2'),
+              ),
+        
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
 
 // import 'package:flutter/cupertino.dart';
 
