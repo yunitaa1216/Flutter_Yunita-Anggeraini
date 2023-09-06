@@ -126,21 +126,64 @@
 
 
 //Tess
-import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
 
-void main (){
-  runApp(const HelloWord());
-}
+// void main() {
+//   runApp(MyApp());
+// }
 
-class HelloWord extends StatelessWidget {
-  const HelloWord({super.key});
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: 'Flutter Material',
+//       theme: ThemeData(
+//         primarySwatch: Colors.blue, // Warna utama
+//       ),
+//       home: MyHomePage(),
+//     );
+//   }
+// }
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: AppBar(
-        title: const Text('Hai nama ku Yunita'),
-      ),
-    );
-  }
-}
+// class MyHomePage extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text('Material App'),
+//       ),
+//       body: Center(
+//         child: Text('Tes Material App'),
+//       ),
+//     );
+//   }
+// }
+
+// import 'package:flutter/cupertino.dart';
+
+// void main() {
+//   runApp(MyApp());
+// }
+
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return CupertinoApp(
+//       home: CupertinoPageScaffold(
+//         navigationBar: CupertinoNavigationBar(
+//           middle: Text('Cupertino'),
+//         ),
+//         child: Center(
+//             child: Text('Flutter Cupertino'),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+//       home: AppBar(
+//         title: const Text('Hai nama ku Yunita'),
+//       ),
+//     );
+//   }
+// }
