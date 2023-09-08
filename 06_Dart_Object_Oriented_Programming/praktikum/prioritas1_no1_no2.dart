@@ -1,3 +1,5 @@
+// Prioritas 1 no 1 dan 2
+
 class Hewan {
   double berat;
 
@@ -19,21 +21,25 @@ class Mobil {
       print('Kapasitas muatan sudah penuh, hewan tidak dapat ditambahkan.');
     }
   }
+
+  double totalMuatan() {
+    return muatan.fold(0.0, (total, hewan) => total + hewan.berat);
+  }
 }
 
 void main() {
   Hewan anjing = Hewan(5.3);
   Hewan kucing = Hewan(3);
 
-  Mobil mobil = Mobil(10.0); // Kapasitas mobil adalah 10.0 kg
+  Mobil mobil = Mobil(10.0);
 
-  // Menambahkan hewan ke dalam muatan mobil
   mobil.tambahMuatan(anjing);
   mobil.tambahMuatan(kucing);
 
-  // Menampilkan muatan mobil
   print('Muatan mobil:');
   for (var hewan in mobil.muatan) {
     print('Berat badan hewan: ${hewan.berat} kg');
   }
+
+  print('Total berat muatan mobil: ${mobil.totalMuatan()} kg');
 }
