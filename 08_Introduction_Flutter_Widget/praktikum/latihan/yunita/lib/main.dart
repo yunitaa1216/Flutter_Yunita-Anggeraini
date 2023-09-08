@@ -129,67 +129,49 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Yunita App'),
+          title:const Text('Yunita App'),
         ),
-        body: Center(
+        body:const Center(
           child: Text('Material'),
         ),
-         drawer: Drawer(
+        drawer: Drawer(
           child: ListView(
-            children: [
-              DrawerHeader(
+            children: const [
+              const DrawerHeader(
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(255, 121, 175, 220), // Warna latar belakang header
                 ),
                 child: Text('Drawer Widget'),
               ),
-              ListTile(
+              const ListTile(
                 title: Text('Item 1'),
               ),
-              ListTile(
+              const ListTile(
                 title: Text('Item 2'),
               ),
             ],
           ),
         ),
-        bottomNavigationBar: BottomNavigationBar(
-  type: BottomNavigationBarType.fixed,
-  items: <BottomNavigationBarItem>[
-    BottomNavigationBarItem(
-      icon: Ink(
-        decoration: BoxDecoration(
-          color: Colors.green, // Warna latar belakang hijau
-          borderRadius: BorderRadius.circular(20.0), // Bentuk oval
+        bottomNavigationBar: NavigationBar(
+          indicatorColor: Colors.green,
+          destinations: const <Widget>[
+            NavigationDestination(
+              icon: Icon(Icons.abc), label: 'verified user'),
+            NavigationDestination(
+              icon: Icon(Icons.abc), label: 'verified user'),
+          ],
         ),
-        child: InkWell(
-          child: Padding(
-            padding: EdgeInsets.all(10.0),
-            child: Icon(
-              Icons.abc_outlined, // Menggunakan ikon Icons.verified_user
-              color: Colors.white, // Warna ikon putih
-            ),
-          ),
-        ),
-      ),
-      label: 'verified user',
-    ),
-    BottomNavigationBarItem(
-      icon: Icon(Icons.abc_outlined), // Icon tanpa latar belakang
-      label: 'verified user',
-    ),
-  ],
-  selectedLabelStyle: TextStyle(color: Colors.black), // Warna teks teks yang dipilih
-  unselectedLabelStyle: TextStyle(color: Colors.black),
-),
         ));
   }
 }
