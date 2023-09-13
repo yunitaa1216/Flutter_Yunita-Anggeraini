@@ -126,55 +126,55 @@
 
 
 // Tess
-import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+// void main() {
+//   runApp(const MyApp());
+// }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title:const Text('Yunita App'),
-        ),
-        body:const Center(
-          child: Text('Material'),
-        ),
-        drawer: Drawer(
-          child: ListView(
-            children: const [
-              const DrawerHeader(
-                decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 121, 175, 220), // Warna latar belakang header
-                ),
-                child: Text('Drawer Widget'),
-              ),
-              const ListTile(
-                title: Text('Item 1'),
-              ),
-              const ListTile(
-                title: Text('Item 2'),
-              ),
-            ],
-          ),
-        ),
-        bottomNavigationBar: NavigationBar(
-          indicatorColor: Colors.green,
-          destinations: const <Widget>[
-            NavigationDestination(
-              icon: Icon(Icons.abc), label: 'verified user'),
-            NavigationDestination(
-              icon: Icon(Icons.abc), label: 'verified user'),
-          ],
-        ),
-        ));
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title:const Text('Yunita App'),
+//         ),
+//         body:const Center(
+//           child: Text('Material'),
+//         ),
+//         drawer: Drawer(
+//           child: ListView(
+//             children: const [
+//               const DrawerHeader(
+//                 decoration: BoxDecoration(
+//                   color: const Color.fromARGB(255, 121, 175, 220), // Warna latar belakang header
+//                 ),
+//                 child: Text('Drawer Widget'),
+//               ),
+//               const ListTile(
+//                 title: Text('Item 1'),
+//               ),
+//               const ListTile(
+//                 title: Text('Item 2'),
+//               ),
+//             ],
+//           ),
+//         ),
+//         bottomNavigationBar: NavigationBar(
+//           indicatorColor: Colors.green,
+//           destinations: const <Widget>[
+//             NavigationDestination(
+//               icon: Icon(Icons.abc), label: 'verified user'),
+//             NavigationDestination(
+//               icon: Icon(Icons.abc), label: 'verified user'),
+//           ],
+//         ),
+//         ));
+//   }
+// }
 
 // import 'package:flutter/cupertino.dart';
 
@@ -204,3 +204,168 @@ class MyApp extends StatelessWidget {
 //     );
 //   }
 // }
+
+import 'package:flutter/material.dart';
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title:const Text('Yunita App'),
+        ),
+        body:Container(
+          color: Color.fromARGB(255, 150, 74, 74),
+          margin: EdgeInsets.only(top: 30, left: 20, right: 20),
+          child: Center(
+            child: Column(children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text('Yunita'),
+                  Text('Yunita')
+                ],
+              ),
+              SizedBox(
+                height: 60,
+              ),
+              Text('List Peserta Flutter Kelas D'),
+              
+              Expanded(
+                child: GridView.builder(
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2, // Jumlah kolom dalam GridView
+                    crossAxisSpacing: 8.0, // Spasi antara kolom
+                    mainAxisSpacing: 8.0, // Spasi antara baris
+                  ),
+                  itemCount: 100, // Ganti dengan jumlah data yang sesuai
+                  itemBuilder: (BuildContext context, int index) {
+                    return Text('Nama Peserta $index');
+                  },
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+
+              Expanded(child: ListView(
+                padding: const EdgeInsets.all(8),
+                children: [
+                  Text('ADE ALI INDRA'),
+                  Text('ALWIN ZUHRIANDI MANALU'),
+                  Text('ANISA YUNIARTI'),
+                  Text('Bima Pangestu Nugraha'),
+                  Text('Dastin Pranata Yuda'),
+                  Text('David Christian Hui'),
+                  Text('David Liem'),
+                  Text('Delia Sepiana'),
+                  Text('FAJRUL KAMAL'),
+                  Text('GHAZI FARHANU DISASMORO'),
+                  Text('HIDAYAH DANIAWATI'),
+                  Text('JUHARMANSAH'),
+                  Text('KATARINA ANDREA LAURENTIA'),
+                  Text('MUHAMMAD AFRIZAL RASYID'),
+                  Text('MUHAMMAD ARARYA HAFIZH ATHALLA'),
+                  Text('MUHAMMAD ILHAM'),
+                  Text('MUHAMMAD NGURAH ARYA PRATAMA'),
+                  Text('MUSTIKA CHAIRANI'),
+                  Text('NURMALASARI'),
+                  Text('Phrimus Nufeto'),
+                  Text('PUTRI DIANA HAFSYAWATI'),
+                  Text('RACHAEL NATHASYA'),
+                  Text('RAFI TAUFIQURAHMAN'),
+                  Text('RAMADHAN PUTRA NUGRAHA'),
+                  Text('YUNITA ANGGERAINI'),
+                  Text('ADE ALI INDRA'),
+                  Text('ALWIN ZUHRIANDI MANALU'),
+                  Text('ANISA YUNIARTI'),
+                  Text('Bima Pangestu Nugraha'),
+                  Text('Dastin Pranata Yuda'),
+                  Text('David Christian Hui'),
+                  Text('David Liem'),
+                  Text('Delia Sepiana'),
+                  Text('FAJRUL KAMAL'),
+                  Text('GHAZI FARHANU DISASMORO'),
+                  Text('HIDAYAH DANIAWATI'),
+                  Text('JUHARMANSAH'),
+                  Text('KATARINA ANDREA LAURENTIA'),
+                  Text('MUHAMMAD AFRIZAL RASYID'),
+                  Text('MUHAMMAD ARARYA HAFIZH ATHALLA'),
+                  Text('MUHAMMAD ILHAM'),
+                  Text('MUHAMMAD NGURAH ARYA PRATAMA'),
+                  Text('MUSTIKA CHAIRANI'),
+                  Text('NURMALASARI'),
+                  Text('Phrimus Nufeto'),
+                  Text('PUTRI DIANA HAFSYAWATI'),
+                  Text('RACHAEL NATHASYA'),
+                  Text('RAFI TAUFIQURAHMAN'),
+                  Text('RAMADHAN PUTRA NUGRAHA'),
+                  Text('YUNITA ANGGERAINI'),
+                  Text('ADE ALI INDRA'),
+                  Text('ALWIN ZUHRIANDI MANALU'),
+                  Text('ANISA YUNIARTI'),
+                  Text('Bima Pangestu Nugraha'),
+                  Text('Dastin Pranata Yuda'),
+                  Text('David Christian Hui'),
+                  Text('David Liem'),
+                  Text('Delia Sepiana'),
+                  Text('FAJRUL KAMAL'),
+                  Text('GHAZI FARHANU DISASMORO'),
+                  Text('HIDAYAH DANIAWATI'),
+                  Text('JUHARMANSAH'),
+                  Text('KATARINA ANDREA LAURENTIA'),
+                  Text('MUHAMMAD AFRIZAL RASYID'),
+                  Text('MUHAMMAD ARARYA HAFIZH ATHALLA'),
+                  Text('MUHAMMAD ILHAM'),
+                  Text('MUHAMMAD NGURAH ARYA PRATAMA'),
+                  Text('MUSTIKA CHAIRANI'),
+                  Text('NURMALASARI'),
+                  Text('Phrimus Nufeto'),
+                  Text('PUTRI DIANA HAFSYAWATI'),
+                  Text('RACHAEL NATHASYA'),
+                  Text('RAFI TAUFIQURAHMAN'),
+                  Text('RAMADHAN PUTRA NUGRAHA'),
+                  Text('YUNITA ANGGERAINI'),
+                  Text('ADE ALI INDRA'),
+                  Text('ALWIN ZUHRIANDI MANALU'),
+                  Text('ANISA YUNIARTI'),
+                  Text('Bima Pangestu Nugraha'),
+                  Text('Dastin Pranata Yuda'),
+                  Text('David Christian Hui'),
+                  Text('David Liem'),
+                  Text('Delia Sepiana'),
+                  Text('FAJRUL KAMAL'),
+                  Text('GHAZI FARHANU DISASMORO'),
+                  Text('HIDAYAH DANIAWATI'),
+                  Text('JUHARMANSAH'),
+                  Text('KATARINA ANDREA LAURENTIA'),
+                  Text('MUHAMMAD AFRIZAL RASYID'),
+                  Text('MUHAMMAD ARARYA HAFIZH ATHALLA'),
+                  Text('MUHAMMAD ILHAM'),
+                  Text('MUHAMMAD NGURAH ARYA PRATAMA'),
+                  Text('MUSTIKA CHAIRANI'),
+                  Text('NURMALASARI'),
+                  Text('Phrimus Nufeto'),
+                  Text('PUTRI DIANA HAFSYAWATI'),
+                  Text('RACHAEL NATHASYA'),
+                  Text('RAFI TAUFIQURAHMAN'),
+                  Text('RAMADHAN PUTRA NUGRAHA'),
+                  Text('YUNITA ANGGERAINI'),
+                ],
+              ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+            ]),
+          ),
+        )
+        ));
+  }
+}
