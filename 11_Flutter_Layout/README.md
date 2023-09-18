@@ -9,7 +9,7 @@ Widget ini hanya dapat memiliki satu child saja seperti container, center, sized
 - Center, membuat box yang memenui lebar dan tinggi ruang diluarnya
 - SizedBox, merupakan bentuk sederhana dari container dimana membuat box yang dapat diatur lebar dan tingginya
 
-### Packages Management
+### Multi-child Layout
 Multi-child Layout digunakan jika kita ingin meletakkan child lebih dari satu. Dimana akan menggunakan properti children yang memiliki tipe array widget.
 - Column, untuk mengatur widgets secara vertikal
 - Row, untuk mengatur widgets secara horizontal
