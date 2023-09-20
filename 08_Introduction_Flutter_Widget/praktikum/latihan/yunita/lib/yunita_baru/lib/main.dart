@@ -246,41 +246,53 @@
 // // }
 
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MaterialApp(
+    home: MyApp(),
+  ));
 }
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
-  State<MyApp> createState() => _MyAppState();
+  Widget build(BuildContext context) {
+    return const HelloWord();
+  }
 }
 
-class _MyAppState extends State<MyApp> {
+class HelloWord extends StatefulWidget {
+  const HelloWord({super.key});
+
+  @override
+  State<HelloWord> createState() => _HelloWordState();
+}
+
+class _HelloWordState extends State<HelloWord> {
   // var inputController = TextEditingController();
   var inputController = TextEditingController(text: '');
   var radioValue = '';
   bool checkValue = false;
   var dropDownValue = 0;
-  // DateTime _dueDate = DateTime.now();
-  // final currentDate = DateTime.now();
-  DateTime selectedDate = DateTime.now(); // Untuk menyimpan tanggal yang dipilih
+  DateTime _dueDate = DateTime.now();
+  final currentDate = DateTime.now();
+  // DateTime selectedDate = DateTime.now(); // Untuk menyimpan tanggal yang dipilih
 
-  Future<void> _selectDate(BuildContext context) async {
-    final DateTime picked = await showDatePicker(
-      context: context,
-      initialDate: selectedDate,
-      firstDate: DateTime(2000),
-      lastDate: DateTime(2101),
-    );
-    if (picked != null && picked != selectedDate) {
-      setState(() {
-        selectedDate = picked;
-      });
-    }
-  }
+  // Future<void> _selectDate(BuildContext context) async {
+  //   final DateTime picked = await showDatePicker(
+  //     context: context,
+  //     initialDate: selectedDate,
+  //     firstDate: DateTime(2000),
+  //     lastDate: DateTime(2101),
+  //   );
+  //   if (picked != null && picked != selectedDate) {
+  //     setState(() {
+  //       selectedDate = picked;
+  //     });
+  //   }
+  // }
   List data_kontak = [
     {
       "title": "Mahasiswa", 
@@ -298,7 +310,22 @@ class _MyAppState extends State<MyApp> {
       "title": "Mahasiswa", 
       "jenis_kelamin": "Perempuan"
     },
-  ]; 
+  ];
+
+  Future<void> _selectDate(BuildContext context) async {
+  final DateTime? picked = await showDatePicker(
+    context: context,
+    initialDate: _dueDate,
+    firstDate: DateTime(2000),
+    lastDate: DateTime(2101),
+  );
+
+  if (picked != null) {
+    setState(() {
+      _dueDate = picked;
+    });
+  }
+}
 
   @override
   Widget build(BuildContext context) {
@@ -309,18 +336,24 @@ class _MyAppState extends State<MyApp> {
         ),
         body: SingleChildScrollView(
           child: Container(
-            color: Color.fromARGB(255, 149, 149, 189),
+            color: Color.fromARGB(255, 88, 88, 96),
             margin: EdgeInsets.only(top: 30, left: 20, right: 20),
             child: Center(
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text('Yunita'),
-                      Text('Yunita')
-                    ],
+                    children: [],
                   ),
+                // children: [
+                //   Row(
+                //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //     children: [
+                //       Text('Yunita'),
+                //       Text('Yunita')
+                //     ],
+                //   ),
                   SizedBox(
                     height: 60,
                   ),
@@ -360,73 +393,32 @@ class _MyAppState extends State<MyApp> {
                       Text('Perempuan'),
                     ],
                   ),
-                  //checkbox simple
-                  // Divider(),
-                  // Row(
-                  //   children: [
-                  //     Checkbox(
-                  //         value: checkValue,
-                  //         checkColor: Colors.green,
-                  //         onChanged: (bool? value) {
-                  //           setState(() {
-                  //             checkValue = value!;
-                  //             print('$checkValue');
-                  //           });
-                  //         }),
-                  //     Text('C++'),
-                  //   ],
-                  // ),
-                  // Row(
-                  //   children: [
-                  //     Checkbox(
-                  //         value: checkValue,
-                  //         checkColor: Colors.green,
-                  //         onChanged: (bool? value) {
-                  //           setState(() {
-                  //             checkValue = value!;
-                  //             print('$checkValue');
-                  //           });
-                  //         }),
-                  //     Text('Dart'),
-                  //   ],
-                  // ),
-                  // Row(
-                  //   children: [
-                  //     Checkbox(
-                  //         value: checkValue,
-                  //         checkColor: Colors.green,
-                  //         onChanged: (bool? value) {
-                  //           setState(() {
-                  //             checkValue = value!;
-                  //             print('$checkValue');
-                  //           });
-                  //         }),
-                  //     Text('PHP'),
-                  //   ],
-                  // ),
-                  // Divider(),
-                  // DropdownButton(
-                  //     value: dropDownValue,
-                  //     items: [
-                  //       DropdownMenuItem(
-                  //         value: 0,
-                  //         child: Text('pilihan 1'),
-                  //       ),
-                  //       DropdownMenuItem(value: 1, child: Text('pilihan 2')),
-                  //       DropdownMenuItem(value: 2, child: Text('pilihan 3'))
-                  //     ],
-                  //     onChanged: (int? value) {
-                  //       setState(() {
-                  //         dropDownValue = value ?? 0;
-                  //         print('$dropDownValue');
-                  //       });
-                  //     }),
                   Divider(),
-                  Text('Tanggal yang dipilih: ${selectedDate.toLocal()}'),
-          ElevatedButton(
-            onPressed: () => _selectDate(context), // Tampilkan Date Picker saat tombol ditekan
-            child: Text('Pilih Tanggal'),
-          ),
+                 Row(
+  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+  children: [
+    Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Date',
+          style: TextStyle(fontSize: 16),
+        ),
+        Text(
+          "${DateFormat('dd/MM/yyyy').format(currentDate)}",
+          style: TextStyle(fontSize: 16),
+        ),
+      ],
+    ),
+    TextButton(
+      onPressed: () {
+        _selectDate(context);
+      },
+      child: Text("Select"),
+    ),
+  ],
+),
+
                   ElevatedButton(
                     child: Text('Submit'),
                     onPressed: () {
@@ -434,6 +426,7 @@ class _MyAppState extends State<MyApp> {
                         data_kontak.add({
                           "title": "${inputController.text}",
                           "jenis_kelamin": "$radioValue",
+                          "tanggal": "${DateFormat('dd/MM/yyyy').format(_dueDate)}",
                           // "checkbox": checkValue,
                           // "dropdown": dropDownValue,
                         });
