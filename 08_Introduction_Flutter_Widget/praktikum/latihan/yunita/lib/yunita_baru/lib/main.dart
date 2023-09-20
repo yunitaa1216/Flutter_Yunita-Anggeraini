@@ -35,7 +35,7 @@
 //         child: Column(
 //           mainAxisAlignment: MainAxisAlignment.center,
 //           children: <Widget>[
-//             const Text(
+//             const Text(r
 //               'Nama saya adalah Yunita Anggeraini',
 //             ),
 //           ]),
