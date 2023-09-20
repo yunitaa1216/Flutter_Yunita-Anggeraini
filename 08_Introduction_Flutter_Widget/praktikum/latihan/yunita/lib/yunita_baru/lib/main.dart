@@ -7,6 +7,116 @@
 // class MyApp extends StatelessWidget {
 //   const MyApp({super.key});
 
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       theme: ThemeData.dark(),
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title:const Text('Material App'),
+//         ),
+//         body:const Center(
+//           child: Text('This is material App'),
+//         ),
+//         drawer: Theme(
+//           data: ThemeData.dark(), 
+//           child: Drawer(
+//             child: ListView(
+//               children: [
+//                 ListTile(
+//                   title: Text('Home'),
+//                 ),
+//                 ListTile(
+//                   title: Text('Setting'),
+//                 ),
+//               ],
+//                 ),
+//                 ),
+//             ),
+//                 bottomNavigationBar: BottomNavigationBar(
+//             items: const <BottomNavigationBarItem>[
+//             BottomNavigationBarItem(
+//               icon: Icon(Icons.home),
+//               label: 'Home',
+//             ),
+//             BottomNavigationBarItem(
+//               icon: Icon(Icons.settings),
+//               label: 'Setting',
+//             ),
+//           ],
+//         ),
+//                 ));
+//           }
+//         }
+
+
+
+        //     children: const [
+        //       const DrawerHeader(
+        //         decoration: BoxDecoration(
+        //           color: const Color.fromARGB(255, 121, 175, 220), // Warna latar belakang header
+        //         ),
+        //         child: Text('Home'),
+        //       ),
+        //       const ListTile(
+        //         title: Text('Setting'),
+        //         // leading: FlutterLogo(),
+        //       ),
+        //     ],
+//           ),
+//         ),
+//         bottomNavigationBar: NavigationBar(
+//           // indicatorColor: Colors.green,
+//           destinations: const <Widget>[
+//             NavigationDestination(
+//               icon: Icon(Icons.home), label: 'Home'),
+//             NavigationDestination(
+//               icon: Icon(Icons.settings), label: 'Setting'),
+//           ],
+//         ),
+//         ));
+//   }
+// }
+
+// import 'package:flutter/material.dart';
+
+// void main() {
+//   runApp(MyApp());
+// }
+
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: 'Flutter Material',
+//       home: MyHomePage(),
+//     );
+//   }
+// }
+
+// class MyHomePage extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text('Material App'),
+//       ),
+//       body: Center(
+//         child: Text('this is material App'),
+//       ),
+//     );
+//   }
+// }
+
+// import 'package:flutter/material.dart';
+
+// void main() {
+//   runApp(const MyApp());
+// }
+
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+
 //   // This widget is the root of your application.
 //   @override
 //   Widget build(BuildContext context) {
@@ -35,7 +145,7 @@
 //         child: Column(
 //           mainAxisAlignment: MainAxisAlignment.center,
 //           children: <Widget>[
-//             const Text(r
+//             const Text(
 //               'Nama saya adalah Yunita Anggeraini',
 //             ),
 //           ]),
@@ -43,53 +153,97 @@
 //     );
 //   }
 // }
-// class MyApp extends StatelessWidget {
-//   const MyApp({super.key});
-// }
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       title: 'Flutter Demo',
-//       theme: ThemeData(
-//         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-//         useMaterial3: true,
-//       ),
-//       home: const MyHomePage(title: 'Flutter Demo Home Page'),
-//     );
-//   }
+// // void main() {
+// //   runApp(const MyApp());
+// // }
 
-// class MyHomePage extends StatelessWidget {
-//   const MyHomePage({super.key, required this.title});
-//    final String title;
+// // class MyApp extends StatelessWidget {
+// //   const MyApp({super.key});
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: Text(widget.title),
-//       ),
-//       body: Center(
-//         mainAxisAlignment: MainAxisAlignment.center,
-//           children: <Widget>[
-//             const Text(
-//               'You have pushed the button this many times:',
-//             ),
-//             Text(
-//               '$_counter',
-//               style: Theme.of(context).textTheme.headlineMedium,
-//             ),
-//           ],
-//         ),
-//       ),
-//       floatingActionButton: FloatingActionButton(
-//         onPressed: _incrementCounter,
-//         tooltip: 'Increment',
-//         child: const Icon(Icons.add),
-//       ), // This trailing comma makes auto-formatting nicer for build methods.
-//     );
-//   }
-// }
+// //   // This widget is the root of your application.
+// //   @override
+// //   Widget build(BuildContext context) {
+// //     return MaterialApp(
+// //       title: 'Flutter Demo',
+// //       theme: ThemeData(
+// //         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+// //         useMaterial3: true,
+// //       ),
+// //       home: const MyHomePage(),
+// //     );
+// //   }
+// // }
+
+// // class MyHomePage extends StatelessWidget {
+// //   const MyHomePage({super.key});
+
+// //   @override
+// //   Widget build(BuildContext context) {
+// //     return Scaffold(
+// //       appBar: AppBar(
+// //         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+// //         title: Text('Halo Alterra'),
+// //       ),
+// //       body: Center(
+// //         child: Column(
+// //           mainAxisAlignment: MainAxisAlignment.center,
+// //           children: <Widget>[
+// //             const Text(r
+// //               'Nama saya adalah Yunita Anggeraini',
+// //             ),
+// //           ]),
+// //       ),
+// //     );
+// //   }
+// // }
+// // class MyApp extends StatelessWidget {
+// //   const MyApp({super.key});
+// // }
+
+// //   @override
+// //   Widget build(BuildContext context) {
+// //     return MaterialApp(
+// //       title: 'Flutter Demo',
+// //       theme: ThemeData(
+// //         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+// //         useMaterial3: true,
+// //       ),
+// //       home: const MyHomePage(title: 'Flutter Demo Home Page'),
+// //     );
+// //   }
+
+// // class MyHomePage extends StatelessWidget {
+// //   const MyHomePage({super.key, required this.title});
+// //    final String title;
+
+// //   @override
+// //   Widget build(BuildContext context) {
+// //     return Scaffold(
+// //       appBar: AppBar(
+// //         title: Text(widget.title),
+// //       ),
+// //       body: Center(
+// //         mainAxisAlignment: MainAxisAlignment.center,
+// //           children: <Widget>[
+// //             const Text(
+// //               'You have pushed the button this many times:',
+// //             ),
+// //             Text(
+// //               '$_counter',
+// //               style: Theme.of(context).textTheme.headlineMedium,
+// //             ),
+// //           ],
+// //         ),
+// //       ),
+// //       floatingActionButton: FloatingActionButton(
+// //         onPressed: _incrementCounter,
+// //         tooltip: 'Increment',
+// //         child: const Icon(Icons.add),
+// //       ), // This trailing comma makes auto-formatting nicer for build methods.
+// //     );
+// //   }
+// // }
 
 import 'package:flutter/material.dart';
 
@@ -110,6 +264,23 @@ class _MyAppState extends State<MyApp> {
   var radioValue = '';
   bool checkValue = false;
   var dropDownValue = 0;
+  // DateTime _dueDate = DateTime.now();
+  // final currentDate = DateTime.now();
+  DateTime selectedDate = DateTime.now(); // Untuk menyimpan tanggal yang dipilih
+
+  Future<void> _selectDate(BuildContext context) async {
+    final DateTime picked = await showDatePicker(
+      context: context,
+      initialDate: selectedDate,
+      firstDate: DateTime(2000),
+      lastDate: DateTime(2101),
+    );
+    if (picked != null && picked != selectedDate) {
+      setState(() {
+        selectedDate = picked;
+      });
+    }
+  }
   List data_kontak = [
     {
       "title": "Mahasiswa", 
@@ -250,6 +421,12 @@ class _MyAppState extends State<MyApp> {
                   //         print('$dropDownValue');
                   //       });
                   //     }),
+                  Divider(),
+                  Text('Tanggal yang dipilih: ${selectedDate.toLocal()}'),
+          ElevatedButton(
+            onPressed: () => _selectDate(context), // Tampilkan Date Picker saat tombol ditekan
+            child: Text('Pilih Tanggal'),
+          ),
                   ElevatedButton(
                     child: Text('Submit'),
                     onPressed: () {
