@@ -1,4 +1,4 @@
-<h1><center>Flutter Form & Advance Form</center></h1>
+<h1><center>Flutter Form</center></h1>
 
 ### Form
 <p>Form digunakan untuk berinteraksi dengan pengguna dimana form dapat menerima data yang di input user. Form dibuat menggunakan StatefulWidget.</p>
@@ -14,12 +14,3 @@ Ada beberapa input widget yang bisa digunakan yaitu:
 Button bersifat seperti tombol dan akan melakukan sesuatu ketika ditekan.
 - ElevatedButton, button yang timbul dan menjalankan onPressed.
 - IconButton, button yang menampilkan icon.
-
-### Date Picker
-<p>Widget Date Picker digunakan agar user dapat memasukkan tanggal misalnya tanggal kelahiran, jadwal meeting dll. Date Picker dibuat menggunakan fungsi bawaan flutter(showDatePicker) yang memiliki tipe data future.</p>
-
-### Color Picker
-<p>Widget Color Picker digunakan agar user dapat memilih warna.</p>
-
-### File Picker
-<p>Widget File Picker digunakan untuk mengakses storage untuk memilih dan membuka file.</p>
