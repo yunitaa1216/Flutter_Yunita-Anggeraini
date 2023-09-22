@@ -125,7 +125,7 @@ Future<void> _selectDate(BuildContext context) async {
     );
   }
 
-  Future<void> _pickFile() async {
+  Future<String?> _pickFile() async {
     FilePickerResult? result = await FilePicker.platform.pickFiles();
 
     if (result != null) {
@@ -396,6 +396,29 @@ Future<void> _selectDate(BuildContext context) async {
             },
              decoration: InputDecoration(labelText: 'Nomor'),
           ),
+          TextButton(
+          onPressed: () {
+            _selectDate(context); // Panggil date picker
+          },
+          child: Text("Select Date"),
+        ),
+        TextButton(
+          onPressed: () {
+            _selectColor(context); // Panggil color picker
+          },
+          child: Text("Select Color"),
+        ),
+        TextButton(
+          onPressed: () async {
+            String? filePath = await _pickFile(); // Panggil file picker
+            if (filePath != null) {
+              print('Selected file path: $filePath');
+            } else {
+              print('File selection canceled.');
+            }
+          },
+          child: Text("Pick File"),
+        ),
                           ],
           ),
           actions: <Widget>[
