@@ -154,9 +154,9 @@
 //                   children: [
 //                     Text('List Contacts',
 //                     style: TextStyle(
-//         fontSize: 20.0,
-//         fontWeight: FontWeight.bold,
-//       ),
+//                       fontSize: 20.0,
+//                       fontWeight: FontWeight.bold,
+//                     ),
 //                     ),
 //                   ],
 //                 ),
@@ -177,8 +177,7 @@
 //                             shape: BoxShape.circle,
 //                           ),
 //                           child: Center(
-//                             child: Text(
-//                               'A',
+//                             child: Text('A',
 //                               style: TextStyle(
 //                                 color: Colors.black, // Warna huruf putih
 //                                 fontWeight: FontWeight.bold,
@@ -200,80 +199,81 @@
 //                                     TextEditingController nameEditingController = TextEditingController(text: name);
 //                                     TextEditingController numberEditingController = TextEditingController(text: phoneNumber);
 //                                     return AlertDialog(
-//           title: Text('Edit Contact'),
-//           content: Column(
-//             mainAxisSize: MainAxisSize.min,
-//             children: [
-//               TextField(
-//             controller: nameEditingController,
-//             onChanged: (editedName) {
-//               var editName = editedName;
-//             },
-//              decoration: InputDecoration(labelText: 'Name'),
-//           ),
-//           TextField(
-//             controller: numberEditingController,
-//             onChanged: (editedNumber) {
-//               var editNumber = editedNumber;
-//             },
-//              decoration: InputDecoration(labelText: 'Nomor'),
-//           ),
-//                           ],
-//           ),
-//           actions: <Widget>[
-//             TextButton(
-//               child: Text('Simpan'),
-//               onPressed: () {
-//                 String editedName = nameEditingController.text;
-//                 var editedNumber = numberEditingController;
-//                 setState(() {
-//         dataKontak[index]['name'] = nameEditingController.text;
-//                   dataKontak[index]['phoneNumber'] = numberEditingController.text;
-//       });
-//                 Navigator.of(context).pop(); // Tutup dialog
-//               },
-//             ),
-//             TextButton(
-//               child: Text('Batal'),
-//               onPressed: () {
-//                 Navigator.of(context).pop(); // Tutup dialog
-//               },
-//             ),
-//           ],
-//         );
-//                                   });
-//                               print('edit $name');
-//                             }, 
+//                                       title: Text('Edit Contact'),
+//                                       content: Column(
+//                                         mainAxisSize: MainAxisSize.min,
+//                                         children: [
+//                                           TextField(
+//                                             controller: nameEditingController,
+//                                             onChanged: (editedName) {
+//                                               var editName = editedName;
+//                                             },
+//                                             decoration: InputDecoration(labelText: 'Name'),
+//                                           ),
+//                                           TextField(
+//                                             controller: numberEditingController,
+//                                             onChanged: (editedNumber) {
+//                                               var editNumber = editedNumber;
+//                                             },
+//                                             decoration: InputDecoration(labelText: 'Nomor'),
+//                                           ),
+//                                         ],
+//                                       ),
+//                                       actions: <Widget>[
+//                                         TextButton(
+//                                           child: Text('Simpan'),
+//                                           onPressed: () {
+//                                             String editedName = nameEditingController.text;
+//                                             var editedNumber = numberEditingController;
+//                                             setState(() {
+//                                               dataKontak[index]['name'] = nameEditingController.text;
+//                                               dataKontak[index]['phoneNumber'] = numberEditingController.text;
+//                                             });
+//                                             Navigator.of(context).pop(); // Tutup dialog
+//                                           },
+//                                         ),
+//                                         TextButton(
+//                                           child: Text('Batal'),
+//                                           onPressed: () {
+//                                             Navigator.of(context).pop(); // Tutup dialog
+//                                           },
+//                                         ),
+//                                       ],
+//                                     );
+//                                   }
+//                                 );
+//                                 print('edit $name');
+//                               }, 
 //                             ),
 //                             IconButton(
-//             icon: Icon(Icons.delete),
-//             onPressed: () {
-//               showDialog(
-//                 context: context, 
-//                  builder: (BuildContext context) {
-//                   return AlertDialog(
-//                     title: Text('Konfirmasi Hapus'),
-//                     content: Text('Yakin ingin menghapus kontak ini?'),
-//                     actions: <Widget>[
-//                       TextButton(
-//                         onPressed: (){
-//                           setState(() {
-//                   dataKontak.removeAt(index);
-//                 });
-//                 Navigator.of(context).pop();
-//                         }, 
-//                         child: Text('Ya')),
-//                         TextButton(
-//                           child: Text('Batal'),
-//               onPressed: () {
-//                 Navigator.of(context).pop(); // Tutup dialog konfirmasi
-//               },
-//             ),
-//                     ],
-//                   );
-//                 });
-//             },
-//           ),
+//                               icon: Icon(Icons.delete),
+//                               onPressed: () {
+//                                 showDialog(
+//                                   context: context, 
+//                                   builder: (BuildContext context) {
+//                                     return AlertDialog(
+//                                       title: Text('Konfirmasi Hapus'),
+//                                       content: Text('Yakin ingin menghapus kontak ini?'),
+//                                       actions: <Widget>[
+//                                         TextButton(
+//                                           onPressed: (){
+//                                             setState(() {
+//                                               dataKontak.removeAt(index);
+//                                             });
+//                                             Navigator.of(context).pop();
+//                                           }, 
+//                                           child: Text('Ya')),
+//                                         TextButton(
+//                                           child: Text('Batal'),
+//                                           onPressed: () {
+//                                             Navigator.of(context).pop();
+//                                           },
+//                                         ),
+//                                       ],
+//                                     );
+//                                   });
+//                               },
+//                             ),
 //                           ],
 //                         ),
 //                       );

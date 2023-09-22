@@ -113,11 +113,8 @@
 //                     alignment: Alignment.centerRight,
 //                     child: ElevatedButton(
 //                       onPressed: () {
-//                         // Mengumpulkan data dari formulir
 //                         String name = nameController.text;
 //                         String number = numberController.text;
-
-//                         // Mencetak data ke konsol
 //                         print([
 //                           {'title': 'Contacts1', 'subtitle': 'Contacts'},
 //                           {'title': 'Contacts2', 'subtitle': 'Contacts'},

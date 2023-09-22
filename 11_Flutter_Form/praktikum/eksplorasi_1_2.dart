@@ -14,8 +14,8 @@
 // }
 
 // class _MyAppState extends State<MyApp> {
-//   TextEditingController nameController = TextEditingController(); // Controller untuk input nama
-//   TextEditingController numberController = TextEditingController(); // Controller untuk input nomor
+//   TextEditingController nameController = TextEditingController();
+//   TextEditingController numberController = TextEditingController();
 
 //   List<Map<String, String>> dataKontak = [
 //     {'name': 'Name 1', 'phoneNumber': '123-456-7890'},
@@ -49,25 +49,23 @@
 //   }
 
 //   return true;
-// }
-
-// bool isPhoneNumberValid(String phoneNumber) {
-//   if (phoneNumber.isEmpty) {
-//     return false;
 //   }
 
-//   // Validasi panjang nomor telepon
+//   bool isPhoneNumberValid(String phoneNumber) {
+//     if (phoneNumber.isEmpty) {
+//       return false;
+//   }
+
 //   if (phoneNumber.length < 8 || phoneNumber.length > 15) {
 //     return false;
 //   }
 
-//   // Validasi nomor telepon harus terdiri dari angka saja
 //   if (!phoneNumber.startsWith('0') || !phoneNumber.replaceAll(RegExp(r'[0-9]'), '').isEmpty) {
 //     return false;
 //   }
 
 //   return true;
-// }
+//   }
 
 //   @override
 //   Widget build(BuildContext context) {
@@ -107,7 +105,7 @@
 //             Text(
 //               'To keep your contacts organized and easily accessible, please provide the following information to create a new contact. You can enter the person\'s name and phone number, and we\'ll take care of the rest. Creating a new contact has never been easier!',
 //               style: TextStyle(
-//                 color: Color(0xFF5F5E5E),
+//               color: Color(0xFF5F5E5E),
 //               ),
 //             ),
 //             SizedBox(height: 16.0),
@@ -174,72 +172,72 @@
 //                       String name = nameController.text;
 //                       String number = numberController.text;
 //                       if (name.isNotEmpty && number.isNotEmpty) {
-//       if (isNameValid(name)) {
-//         if (isPhoneNumberValid(number)) {
-//           setState(() {
-//             dataKontak.add({'name': name, 'phoneNumber': number});
-//           });
-//           print(dataKontak);
-//         } else {
-//           showDialog(
-//             context: context,
-//             builder: (BuildContext context) {
-//               return AlertDialog(
-//                 title: Text('Error'),
-//                 content: Text(
-//                   'Nomor telepon tidak valid. Pastikan nomor telepon terdiri dari angka saja, panjang minimal 8 digit, maksimal 15 digit, dan dimulai dengan angka 0.',
-//                 ),
-//                 actions: <Widget>[
-//                   TextButton(
-//                     onPressed: () {
-//                       Navigator.of(context).pop();
-//                     },
-//                     child: Text('Ok'),
-//                   ),
-//                 ],
-//               );
-//             },
-//           );
-//         }
-//       } else {
-//         showDialog(
-//           context: context,
-//           builder: (BuildContext context) {
-//             return AlertDialog(
-//               title: Text('Error'),
-//               content: Text(
-//                 'Nama tidak valid. Pastikan nama terdiri dari minimal 2 kata, setiap kata dimulai dengan huruf kapital, dan tidak mengandung angka atau karakter khusus.',
-//               ),
-//               actions: <Widget>[
-//                 TextButton(
-//                   onPressed: () {
-//                     Navigator.of(context).pop();
-//                   },
-//                   child: Text('Ok'),
-//                 ),
-//               ],
-//             );
-//           },
-//         );
-//       }
-//     } else {
-//       showDialog(
-//         context: context,
-//         builder: (BuildContext context) {
-//           return AlertDialog(
-//             title: Text('Error'),
-//             content: Text('Nama dan Nomor tidak boleh kosong.'),
-//             actions: <Widget>[
-//               TextButton(
-//                 onPressed: () {
-//                   Navigator.of(context).pop();
-//                 },
-//                 child: Text('Ok'),
+//                       if (isNameValid(name)) {
+//                       if (isPhoneNumberValid(number)) {
+//                         setState(() {
+//                           dataKontak.add({'name': name, 'phoneNumber': number});
+//                           });
+//                           print(dataKontak);
+//                       } else {
+//                         showDialog(
+//                           context: context,
+//                           builder: (BuildContext context) {
+//                             return AlertDialog(
+//                               title: Text('Error'),
+//                               content: Text(
+//                               'Nomor telepon tidak valid. Pastikan nomor telepon terdiri dari angka saja, panjang minimal 8 digit, maksimal 15 digit, dan dimulai dengan angka 0.',
+//                               ),
+//                               actions: <Widget>[
+//                                 TextButton(
+//                                   onPressed: () {
+//                                     Navigator.of(context).pop();
+//                                   },
+//                                   child: Text('Ok'),
+//                                 ),
+//                               ],
+//                             );
+//                           },
+//                         );
+//                       }
+//                       } else {
+//                         showDialog(
+//                           context: context,
+//                           builder: (BuildContext context) {
+//                             return AlertDialog(
+//                               title: Text('Error'),
+//                               content: Text(
+//                                 'Nama tidak valid. Pastikan nama terdiri dari minimal 2 kata, setiap kata dimulai dengan huruf kapital, dan tidak mengandung angka atau karakter khusus.',
+//                               ),
+//                               actions: <Widget>[
+//                                 TextButton(
+//                                   onPressed: () {
+//                                     Navigator.of(context).pop();
+//                                   },
+//                                   child: Text('Ok'),
+//                                 ),
+//                               ],
+//                             );
+//                           },
+//                         );
+//                       }
+//                       } else {
+//                         showDialog(
+//                           context: context,
+//                           builder: (BuildContext context) {
+//                             return AlertDialog(
+//                               title: Text('Error'),
+//                               content: Text('Nama dan Nomor tidak boleh kosong.'),
+//                               actions: <Widget>[
+//                                 TextButton(
+//                                   onPressed: () {
+//                                     Navigator.of(context).pop();
+//                                   },
+//                                   child: Text('Ok'),
 //                                 ),
 //                               ],
 //                             ); 
 //                           },
-//                           );
+//                         );
 //                       }
 //                     },
 //                     style: ElevatedButton.styleFrom(
@@ -248,7 +246,6 @@
 //                         borderRadius: BorderRadius.circular(50.0),
 //                       ),
 //                     ),
-                    
 //                     child: Text(
 //                       'Submit',
 //                     ),
@@ -257,10 +254,10 @@
 //                 Column(
 //                   children: [
 //                     Text('List Contacts',
-//                     style: TextStyle(
-//         fontSize: 20.0,
-//         fontWeight: FontWeight.bold,
-//       ),
+//                       style: TextStyle(
+//                         fontSize: 20.0,
+//                         fontWeight: FontWeight.bold,
+//                       ),
 //                     ),
 //                   ],
 //                 ),
@@ -281,8 +278,7 @@
 //                             shape: BoxShape.circle,
 //                           ),
 //                           child: Center(
-//                             child: Text(
-//                               'A',
+//                             child: Text('A',
 //                               style: TextStyle(
 //                                 color: Colors.black, // Warna huruf putih
 //                                 fontWeight: FontWeight.bold,
@@ -304,80 +300,82 @@
 //                                     TextEditingController nameEditingController = TextEditingController(text: name);
 //                                     TextEditingController numberEditingController = TextEditingController(text: phoneNumber);
 //                                     return AlertDialog(
-//           title: Text('Edit Contact'),
-//           content: Column(
-//             mainAxisSize: MainAxisSize.min,
-//             children: [
-//               TextField(
-//             controller: nameEditingController,
-//             onChanged: (editedName) {
-//               var editName = editedName;
-//             },
-//              decoration: InputDecoration(labelText: 'Name'),
-//           ),
-//           TextField(
-//             controller: numberEditingController,
-//             onChanged: (editedNumber) {
-//               var editNumber = editedNumber;
-//             },
-//              decoration: InputDecoration(labelText: 'Nomor'),
-//           ),
-//                           ],
-//           ),
-//           actions: <Widget>[
-//             TextButton(
-//               child: Text('Simpan'),
-//               onPressed: () {
-//                 String editedName = nameEditingController.text;
-//                 var editedNumber = numberEditingController;
-//                 setState(() {
-//         dataKontak[index]['name'] = nameEditingController.text;
-//                   dataKontak[index]['phoneNumber'] = numberEditingController.text;
-//       });
-//                 Navigator.of(context).pop(); // Tutup dialog
-//               },
-//             ),
-//             TextButton(
-//               child: Text('Batal'),
-//               onPressed: () {
-//                 Navigator.of(context).pop(); // Tutup dialog
-//               },
-//             ),
-//           ],
-//         );
+//                                       title: Text('Edit Contact'),
+//                                       content: Column(
+//                                         mainAxisSize: MainAxisSize.min,
+//                                         children: [
+//                                           TextField(
+//                                         controller: nameEditingController,
+//                                         onChanged: (editedName) {
+//                                           var editName = editedName;
+//                                         },
+//                                         decoration: InputDecoration(labelText: 'Name'),
+//                                         ),
+//                                         TextField(
+//                                           controller: numberEditingController,
+//                                           onChanged: (editedNumber) {
+//                                             var editNumber = editedNumber;
+//                                           },
+//                                           decoration: InputDecoration(labelText: 'Nomor'),
+//                                         ),
+//                                         ],
+//                                       ),
+//                                       actions: <Widget>[
+//                                         TextButton(
+//                                           child: Text('Simpan'),
+//                                           onPressed: () {
+//                                             String editedName = nameEditingController.text;
+//                                             var editedNumber = numberEditingController;
+//                                             setState(() {
+//                                               dataKontak[index]['name'] = nameEditingController.text;
+//                                               dataKontak[index]['phoneNumber'] = numberEditingController.text;
+//                                             });
+//                                             Navigator.of(context).pop();
+//                                           },
+//                                         ),
+//                                         TextButton(
+//                                           child: Text('Batal'),
+//                                           onPressed: () {
+//                                             Navigator.of(context).pop(); // Tutup dialog
+//                                           },
+//                                         ),
+//                                       ],
+//                                     );
 //                                   });
-//                               print('edit $name');
-//                             }, 
+//                                   print('edit $name');
+//                               }, 
 //                             ),
 //                             IconButton(
-//             icon: Icon(Icons.delete),
-//             onPressed: () {
-//               showDialog(
-//                 context: context, 
-//                  builder: (BuildContext context) {
-//                   return AlertDialog(
-//                     title: Text('Konfirmasi Hapus'),
-//                     content: Text('Yakin ingin menghapus kontak ini?'),
-//                     actions: <Widget>[
-//                       TextButton(
-//                         onPressed: (){
-//                           setState(() {
-//                   dataKontak.removeAt(index);
-//                 });
-//                 Navigator.of(context).pop();
-//                         }, 
-//                         child: Text('Ya')),
-//                         TextButton(
-//                           child: Text('Batal'),
-//               onPressed: () {
-//                 Navigator.of(context).pop(); // Tutup dialog konfirmasi
-//               },
-//             ),
-//                     ],
-//                   );
-//                 });
-//             },
-//           ),
+//                               icon: Icon(Icons.delete),
+//                               onPressed: () {
+//                                 showDialog(
+//                                   context: context, 
+//                                   builder: (BuildContext context) {
+//                                     return AlertDialog(
+//                                       title: Text('Konfirmasi Hapus'),
+//                                       content: Text('Yakin ingin menghapus kontak ini?'),
+//                                       actions: <Widget>[
+//                                         TextButton(
+//                                           onPressed: (){
+//                                             setState(() {
+//                                               dataKontak.removeAt(index);
+//                                              });
+//                                           Navigator.of(context).pop();
+//                                           }, 
+//                                           child: Text('Ya')
+//                                         ),
+//                                         TextButton(
+//                                           child: Text('Batal'),
+//                                           onPressed: () {
+//                                           Navigator.of(context).pop(); // Tutup dialog konfirmasi
+//                                           },
+//                                         ),
+//                                       ],
+//                                     );
+//                                   }
+//                                 );
+//                               },
+//                             ),
 //                           ],
 //                         ),
 //                       );
