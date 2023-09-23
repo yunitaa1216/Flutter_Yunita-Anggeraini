@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 import 'package:intl/intl.dart';
 import 'package:file_picker/file_picker.dart';
+import 'dart:io';
 
 void main() {
   runApp(MaterialApp(
@@ -16,160 +17,13 @@ class MyApp extends StatefulWidget {
   _MyAppState createState() => _MyAppState();
 }
 
-// class NewPage extends StatefulWidget {
-//   @override
-//   _NewPageState createState() => _NewPageState();
-// }
-
-// class _NewPageState extends State<NewPage> {
-//   DateTime _selectedDate = DateTime.now();
-//   Color _selectedColor = Colors.black;
-
-//   Future<void> _selectDate(BuildContext context) async {
-//     final DateTime? picked = await showDatePicker(
-//       context: context,
-//       initialDate: _selectedDate,
-//       firstDate: DateTime(2000),
-//       lastDate: DateTime(2101),
-//     );
-
-//     if (picked != null) {
-//       setState(() {
-//         _selectedDate = picked;
-//       });
-//     }
-//   }
-
-//   void _selectColor(BuildContext context) {
-//   showDialog(
-//     context: context,
-//     builder: (BuildContext context) {
-//       Color tempColor = _selectedColor; // Salin warna saat ini ke variabel sementara
-
-//       return AlertDialog(
-//         title: Text('Pick a Color'),
-//         content: SingleChildScrollView(
-//           child: ColorPicker(
-//             pickerColor: tempColor,
-//             onColorChanged: (color) {
-//               setState(() {
-//                 tempColor = color;
-//               });
-//             },
-//             pickerAreaHeightPercent: 0.4,
-//           ),
-//         ),
-//         actions: <Widget>[
-//           TextButton(
-//             child: Text('Done'),
-//             onPressed: () {
-//               Navigator.of(context).pop();
-//               setState(() {
-//                 _selectedColor = tempColor; // Setel warna yang dipilih
-//               });
-//             },
-//           ),
-//         ],
-//       );
-//     },
-//   );
-// }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: Center(
-//           child: Text('Interactive Widgets'),
-//         ),
-//       ),
-//       body: Column(
-//         crossAxisAlignment: CrossAxisAlignment.start,
-//         children: [
-//           SizedBox(height: 10.0),
-//           Row(
-//             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//             children: [
-//               Column(
-//                 crossAxisAlignment: CrossAxisAlignment.start,
-//                 children: [
-//                   Text('Date'),
-//                   Text(
-//                     DateFormat('dd-MM-yyyy').format(_selectedDate),
-//                   ),
-//                 ],
-//               ),
-//               TextButton(
-//                 onPressed: () {
-//                   _selectDate(context);
-//                 },
-//                 child: Text("Select"),
-//               ),
-//             ],
-//           ),
-//           SizedBox(height: 20.0),
-//           Column(
-//             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//             children: [
-//               Column(
-//                 crossAxisAlignment: CrossAxisAlignment.start,
-//                 children: [
-//                   Text('Color'),
-//                   Container(
-//                     width: MediaQuery.of(context).size.width,
-//                     height: 100.0,
-//                     color: _selectedColor, // Tampilkan warna yang dipilih di kotak
-//                   ),
-//                 ],
-//               ),
-//               SizedBox(height: 16.0,),
-//               ElevatedButton(
-//   onPressed: () {
-//     _selectColor(context);
-//   },
-//   style: ElevatedButton.styleFrom(
-//     primary: Color.fromARGB(255, 2, 6, 9), // Ubah warna latar belakang tombol menjadi biru
-//   ),
-//   child: Text("Pick Color"),
-// ),
-// SizedBox(height: 16.0),
-//               Row(
-//                 crossAxisAlignment: CrossAxisAlignment.start,
-//                 children: [
-//                   Text('Pick File'),
-//                 ],
-//               ),
-//               SizedBox(height: 16.0,),
-//               ElevatedButton(
-//                 onPressed: () async {
-//                   FilePickerResult? result = await FilePicker.platform.pickFiles();
-
-//                   if (result != null) {
-//                     String filePath = result.files.single.path!;
-//                     print('Selected file path: $filePath');
-//                   } else {
-//                     print('File selection canceled.');
-//                   }
-//                 },
-//                 style: ElevatedButton.styleFrom(
-//                   primary: Color.fromARGB(255, 2, 6, 9), // Ubah warna latar belakang tombol menjadi biru
-//                 ),
-//                 child: Text("Pick and open File"),
-//               ),
-//             ],
-//           ),
-//         ],
-//       ),
-//     );
-//   }
-// }
-
 class _MyAppState extends State<MyApp> {
   TextEditingController nameController = TextEditingController(); // Controller untuk input nama
   TextEditingController numberController = TextEditingController(); // Controller untuk input nomor
   DateTime _selectedDate = DateTime.now();
   Color _selectedColor = Colors.black;
-
+  File? _selectedFile;
+   
   Future<void> _selectDate(BuildContext context) async {
     final DateTime? picked = await showDatePicker(
       context: context,
@@ -185,54 +39,61 @@ class _MyAppState extends State<MyApp> {
     }
   }
 
+  
   void _selectColor(BuildContext context) {
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        Color tempColor = _selectedColor;
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      Color tempColor = _selectedColor; // Salin warna saat ini ke variabel sementara
 
-        return AlertDialog(
-          title: Text('Pick a Color'),
-          content: SingleChildScrollView(
-            child: ColorPicker(
-              pickerColor: tempColor,
-              onColorChanged: (color) {
-                setState(() {
-                  tempColor = color;
-                });
-              },
-              pickerAreaHeightPercent: 0.4,
-            ),
+      return AlertDialog(
+        title: Text('Pick a Color'),
+        content: SingleChildScrollView(
+          child: ColorPicker(
+            pickerColor: tempColor,
+            onColorChanged: (color) {
+              setState(() {
+                tempColor = color;
+              });
+            },
+            pickerAreaHeightPercent: 0.4,
           ),
-          actions: <Widget>[
-            TextButton(
-              child: Text('Done'),
-              onPressed: () {
-                Navigator.of(context).pop();
-                setState(() {
-                  _selectedColor = tempColor;
-                });
-              },
-            ),
-          ],
-        );
-      },
-    );
-  }
+        ),
+        actions: <Widget>[
+          TextButton(
+            child: Text('Done'),
+            onPressed: () {
+              Navigator.of(context).pop();
+              setState(() {
+                _selectedColor = tempColor; // Setel warna yang dipilih
+              });
+            },
+          ),
+        ],
+      );
+    },
+  );
+}
 
-  // Future<void> _selectDate(BuildContext context) async {
-  //   final DateTime picked = await showDatePicker(
-  //     context: context,
-  //     initialDate: selectedDate,
-  //     firstDate: DateTime(2000),
-  //     lastDate: DateTime(2101),
-  //   );
-  //   if (picked != null && picked != selectedDate) {
-  //     setState(() {
-  //       selectedDate = picked;
-  //     });
-  //   }
-  // }
+Future<void> _selectFile(BuildContext context) async {
+    FilePickerResult? result = await FilePicker.platform.pickFiles(
+      type: FileType.custom,
+      allowedExtensions: ['jpg'], // Filter hanya file JPG
+    );
+
+    if (result != null) {
+    setState(() {
+      _selectedFile = File(result.files.single.path!);
+    });
+
+    // Tambahkan path file ke objek kontak terkait
+    if (_selectedFile != null) {
+      dataKontak.last['file'] = _selectedFile!.path;
+    }
+  } else {
+    print('File selection canceled.');
+  }
+}
 
   List<Map<String, String>> dataKontak = [
     {'name': 'Name 1', 'phoneNumber': '123-456-7890'},
@@ -383,6 +244,76 @@ bool isPhoneNumberValid(String phoneNumber) {
                     ],
                   ),
                 ),
+                SizedBox(height: 10.0),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('Date'),
+                  Text(
+                    DateFormat('dd-MM-yyyy').format(_selectedDate),
+                  ),
+                ],
+              ),
+              TextButton(
+                onPressed: () {
+                  _selectDate(context);
+                },
+                child: Text("Select"),
+              ),
+            ],
+          ),
+          Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(height: 20.0),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('Color'),
+                  Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: 100.0,
+                    color: _selectedColor, // Tampilkan warna yang dipilih di kotak
+                  ),
+                ],
+              ),
+              SizedBox(height: 16.0,),
+              ElevatedButton(
+  onPressed: () {
+    _selectColor(context);
+  },
+  style: ElevatedButton.styleFrom(
+    primary: Color.fromARGB(255, 2, 6, 9), // Ubah warna latar belakang tombol menjadi biru
+  ),
+  child: Text("Pick Color"),
+),
+SizedBox(height: 16.0),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('Pick File'),
+                ],
+              ),
+              SizedBox(height: 16.0,),
+              ElevatedButton(
+    onPressed: () async {
+      await _selectFile(context); // Panggil fungsi _selectFile saat tombol "Pick and open File" ditekan
+    },
+    style: ElevatedButton.styleFrom(
+      primary: Color.fromARGB(255, 2, 6, 9),
+    ),
+    child: Text("Pick and open File"),
+  ),
+            ],
+          ),
+        ],
+      ),
                 SizedBox(height: 6.0),
                 Align(
                   alignment: Alignment.centerRight,
@@ -394,7 +325,13 @@ bool isPhoneNumberValid(String phoneNumber) {
       if (isNameValid(name)) {
         if (isPhoneNumberValid(number)) {
           setState(() {
-            dataKontak.add({'name': name, 'phoneNumber': number});
+            dataKontak.add({
+                'name': name,
+                'phoneNumber': number,
+                'date': DateFormat('dd-MM-yyyy').format(_selectedDate),
+                'color': _selectedColor.toString(),
+                // 'file': _selectedFile != null ? _selectedFile!.path : '',
+              });
           });
           print(dataKontak);
         } else {
@@ -489,6 +426,15 @@ bool isPhoneNumberValid(String phoneNumber) {
                       final contact = dataKontak[index];
                       final name = contact['name'];
                       final phoneNumber = contact['phoneNumber'];
+                      final date = contact['date']; // Ambil properti "date" dari objek kontak
+                      final filePath = contact['file'];
+    final color = contact['color'];
+
+    print('Name: $name');
+      print('Phone Number: $phoneNumber');
+      print('Date: $date');
+      print('Color: $color');
+      
                       return ListTile(
                         leading: Container(
                           width: 36.0,
@@ -508,7 +454,14 @@ bool isPhoneNumberValid(String phoneNumber) {
                           ),
                         ),
                         title: Text(name ?? ''),
-                        subtitle: Text(phoneNumber ?? ''),
+                        subtitle: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(phoneNumber ?? ''),
+            Text('Date: $date'), // Tampilkan tanggal
+            Text('Color : $color'),
+          ],
+          ),
                         trailing: Row(
                           mainAxisSize: MainAxisSize.min,
                           children: [
@@ -608,4 +561,4 @@ bool isPhoneNumberValid(String phoneNumber) {
       ),
     );
   }
-}
+} 
