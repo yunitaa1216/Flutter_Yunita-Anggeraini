@@ -245,75 +245,75 @@
 //                   ),
 //                 ),
 //                 SizedBox(height: 10.0),
-//           Row(
-//             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//             children: [
-//               Column(
-//                 crossAxisAlignment: CrossAxisAlignment.start,
-//                 children: [
-//                   Text('Date'),
-//                   Text(
-//                     DateFormat('dd-MM-yyyy').format(_selectedDate),
-//                   ),
-//                 ],
-//               ),
-//               TextButton(
-//                 onPressed: () {
-//                   _selectDate(context);
-//                 },
-//                 child: Text("Select"),
-//               ),
-//             ],
-//           ),
-//           Column(
-//         crossAxisAlignment: CrossAxisAlignment.start,
-//         children: [
-//           SizedBox(height: 20.0),
-//           Column(
-//             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//             children: [
-//               Column(
-//                 crossAxisAlignment: CrossAxisAlignment.start,
-//                 children: [
-//                   Text('Color'),
-//                   Container(
-//                     width: MediaQuery.of(context).size.width,
-//                     height: 100.0,
-//                     color: _selectedColor, // Tampilkan warna yang dipilih di kotak
-//                   ),
-//                 ],
-//               ),
-//               SizedBox(height: 16.0,),
-//               ElevatedButton(
-//   onPressed: () {
-//     _selectColor(context);
-//   },
-//   style: ElevatedButton.styleFrom(
-//     primary: Color.fromARGB(255, 2, 6, 9), // Ubah warna latar belakang tombol menjadi biru
-//   ),
-//   child: Text("Pick Color"),
-// ),
-// SizedBox(height: 16.0),
-//               Row(
-//                 crossAxisAlignment: CrossAxisAlignment.start,
-//                 children: [
-//                   Text('Pick File'),
-//                 ],
-//               ),
-//               SizedBox(height: 16.0,),
-//               ElevatedButton(
-//     onPressed: () async {
-//       await _selectFile(context); // Panggil fungsi _selectFile saat tombol "Pick and open File" ditekan
-//     },
-//     style: ElevatedButton.styleFrom(
-//       primary: Color.fromARGB(255, 2, 6, 9),
-//     ),
-//     child: Text("Pick and open File"),
-//   ),
-//             ],
-//           ),
-//         ],
-//       ),
+//                 Row(
+//                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//                   children: [
+//                     Column(
+//                       crossAxisAlignment: CrossAxisAlignment.start,
+//                       children: [
+//                         Text('Date'),
+//                         Text(
+//                           DateFormat('dd-MM-yyyy').format(_selectedDate),
+//                         ),
+//                       ],
+//                     ),
+//                     TextButton(
+//                       onPressed: () {
+//                         _selectDate(context);
+//                       },
+//                       child: Text("Select"),
+//                     ),
+//                   ],
+//                 ),
+//                 Column(
+//                   crossAxisAlignment: CrossAxisAlignment.start,
+//                   children: [
+//                     SizedBox(height: 20.0),
+//                     Column(
+//                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//                       children: [
+//                         Column(
+//                           crossAxisAlignment: CrossAxisAlignment.start,
+//                           children: [
+//                             Text('Color'),
+//                             Container(
+//                               width: MediaQuery.of(context).size.width,
+//                               height: 100.0,
+//                               color: _selectedColor,
+//                             ),
+//                           ],
+//                         ),
+//                         SizedBox(height: 16.0,),
+//                         ElevatedButton(
+//                           onPressed: () {
+//                             _selectColor(context);
+//                           },
+//                           style: ElevatedButton.styleFrom(
+//                             primary: Color.fromARGB(255, 2, 6, 9), // Ubah warna latar belakang tombol menjadi biru
+//                           ),
+//                           child: Text("Pick Color"),
+//                         ),
+//                         SizedBox(height: 16.0),
+//                         Row(
+//                           crossAxisAlignment: CrossAxisAlignment.start,
+//                           children: [
+//                             Text('Pick File'),
+//                           ],
+//                         ),
+//                         SizedBox(height: 16.0,),
+//                         ElevatedButton(
+//                           onPressed: () async {
+//                             await _selectFile(context); // Panggil fungsi _selectFile saat tombol "Pick and open File" ditekan
+//                           },
+//                           style: ElevatedButton.styleFrom(
+//                             primary: Color.fromARGB(255, 2, 6, 9),
+//                           ),
+//                           child: Text("Pick and open File"),
+//                         ),
+//                       ],
+//                     ),
+//                   ],
+//                 ),
 //                 SizedBox(height: 6.0),
 //                 Align(
 //                   alignment: Alignment.centerRight,
@@ -322,79 +322,79 @@
 //                       String name = nameController.text;
 //                       String number = numberController.text;
 //                       if (name.isNotEmpty && number.isNotEmpty) {
-//       if (isNameValid(name)) {
-//         if (isPhoneNumberValid(number)) {
-//           setState(() {
-//             dataKontak.add({
-//                 'name': name,
-//                 'phoneNumber': number,
-//                 'date': DateFormat('dd-MM-yyyy').format(_selectedDate),
-//                 'color': _selectedColor.toString(),
-//                 // 'file': _selectedFile != null ? _selectedFile!.path : '',
-//               });
-//           });
-//           print(dataKontak);
-//         } else {
-//           showDialog(
-//             context: context,
-//             builder: (BuildContext context) {
-//               return AlertDialog(
-//                 title: Text('Error'),
-//                 content: Text(
-//                   'Nomor telepon tidak valid. Pastikan nomor telepon terdiri dari angka saja, panjang minimal 8 digit, maksimal 15 digit, dan dimulai dengan angka 0.',
-//                 ),
-//                 actions: <Widget>[
-//                   TextButton(
-//                     onPressed: () {
-//                       Navigator.of(context).pop();
-//                     },
-//                     child: Text('Ok'),
-//                   ),
-//                 ],
-//               );
-//             },
-//           );
-//         }
-//       } else {
-//         showDialog(
-//           context: context,
-//           builder: (BuildContext context) {
-//             return AlertDialog(
-//               title: Text('Error'),
-//               content: Text(
-//                 'Nama tidak valid. Pastikan nama terdiri dari minimal 2 kata, setiap kata dimulai dengan huruf kapital, dan tidak mengandung angka atau karakter khusus.',
-//               ),
-//               actions: <Widget>[
-//                 TextButton(
-//                   onPressed: () {
-//                     Navigator.of(context).pop();
-//                   },
-//                   child: Text('Ok'),
-//                 ),
-//               ],
-//             );
-//           },
-//         );
-//       }
-//     } else {
-//       showDialog(
-//         context: context,
-//         builder: (BuildContext context) {
-//           return AlertDialog(
-//             title: Text('Error'),
-//             content: Text('Nama dan Nomor tidak boleh kosong.'),
-//             actions: <Widget>[
-//               TextButton(
-//                 onPressed: () {
-//                   Navigator.of(context).pop();
-//                 },
-//                 child: Text('Ok'),
-//                                 ),
-//                               ],
-//                             ); 
-//                           },
+//                         if (isNameValid(name)) {
+//                           if (isPhoneNumberValid(number)) {
+//                             setState(() {
+//                               dataKontak.add({
+//                                   'name': name,
+//                                   'phoneNumber': number,
+//                                   'date': DateFormat('dd-MM-yyyy').format(_selectedDate),
+//                                   'color': _selectedColor.toString(),
+//                                   // 'file': _selectedFile != null ? _selectedFile!.path : '',
+//                                 });
+//                             });
+//                             print(dataKontak);
+//                           } else {
+//                             showDialog(
+//                               context: context,
+//                               builder: (BuildContext context) {
+//                                 return AlertDialog(
+//                                   title: Text('Error'),
+//                                   content: Text(
+//                                     'Nomor telepon tidak valid. Pastikan nomor telepon terdiri dari angka saja, panjang minimal 8 digit, maksimal 15 digit, dan dimulai dengan angka 0.',
+//                                   ),
+//                                   actions: <Widget>[
+//                                     TextButton(
+//                                       onPressed: () {
+//                                         Navigator.of(context).pop();
+//                                       },
+//                                       child: Text('Ok'),
+//                                     ),
+//                                   ],
+//                                 );
+//                               },
+//                             );
+//                           }
+//                           } else {
+//                             showDialog(
+//                               context: context,
+//                               builder: (BuildContext context) {
+//                                 return AlertDialog(
+//                                   title: Text('Error'),
+//                                   content: Text(
+//                                     'Nama tidak valid. Pastikan nama terdiri dari minimal 2 kata, setiap kata dimulai dengan huruf kapital, dan tidak mengandung angka atau karakter khusus.',
+//                                   ),
+//                                   actions: <Widget>[
+//                                     TextButton(
+//                                       onPressed: () {
+//                                         Navigator.of(context).pop();
+//                                       },
+//                                       child: Text('Ok'),
+//                                     ),
+//                                   ],
+//                                 );
+//                                 },
+//                               );
+//                             }
+//                           } else {
+//                           showDialog(
+//                             context: context,
+//                             builder: (BuildContext context) {
+//                               return AlertDialog(
+//                                 title: Text('Error'),
+//                                 content: Text('Nama dan Nomor tidak boleh kosong.'),
+//                                 actions: <Widget>[
+//                                   TextButton(
+//                                     onPressed: () {
+//                                       Navigator.of(context).pop();
+//                                     },
+//                                     child: Text('Ok'),
+//                                   ),
+//                                 ],
+//                              ); 
+//                             },
 //                           );
-//                       }
+//                           }
 //                     },
 //                     style: ElevatedButton.styleFrom(
 //                       backgroundColor: Color.fromARGB(255, 91, 76, 138),
@@ -402,7 +402,6 @@
 //                         borderRadius: BorderRadius.circular(50.0),
 //                       ),
 //                     ),
-                    
 //                     child: Text(
 //                       'Submit',
 //                     ),
@@ -412,9 +411,9 @@
 //                   children: [
 //                     Text('List Contacts',
 //                     style: TextStyle(
-//         fontSize: 20.0,
-//         fontWeight: FontWeight.bold,
-//       ),
+//                       fontSize: 20.0,
+//                       fontWeight: FontWeight.bold,
+//                     ),
 //                     ),
 //                   ],
 //                 ),
@@ -426,14 +425,14 @@
 //                       final contact = dataKontak[index];
 //                       final name = contact['name'];
 //                       final phoneNumber = contact['phoneNumber'];
-//                       final date = contact['date']; // Ambil properti "date" dari objek kontak
+//                       final date = contact['date'];
 //                       final filePath = contact['file'];
-//     final color = contact['color'];
+//                       final color = contact['color'];
 
-//     print('Name: $name');
-//       print('Phone Number: $phoneNumber');
-//       print('Date: $date');
-//       print('Color: $color');
+//                       print('Name: $name');
+//                       print('Phone Number: $phoneNumber');
+//                       print('Date: $date');
+//                       print('Color: $color');
       
 //                       return ListTile(
 //                         leading: Container(
@@ -455,13 +454,13 @@
 //                         ),
 //                         title: Text(name ?? ''),
 //                         subtitle: Column(
-//           crossAxisAlignment: CrossAxisAlignment.start,
-//           children: [
-//             Text(phoneNumber ?? ''),
-//             Text('Date: $date'), // Tampilkan tanggal
-//             Text('Color : $color'),
-//           ],
-//           ),
+//                           crossAxisAlignment: CrossAxisAlignment.start,
+//                           children: [
+//                             Text(phoneNumber ?? ''),
+//                             Text('Date: $date'), // Tampilkan tanggal
+//                             Text('Color : $color'),
+//                           ],
+//                         ),
 //                         trailing: Row(
 //                           mainAxisSize: MainAxisSize.min,
 //                           children: [
@@ -474,89 +473,89 @@
 //                                     TextEditingController nameEditingController = TextEditingController(text: name);
 //                                     TextEditingController numberEditingController = TextEditingController(text: phoneNumber);
 //                                     return AlertDialog(
-//           title: Text('Edit Contact'),
-//           content: Column(
-//             mainAxisSize: MainAxisSize.min,
-//             children: [
-//               TextField(
-//             controller: nameEditingController,
-//             onChanged: (editedName) {
-//               var editName = editedName;
-//             },
-//              decoration: InputDecoration(labelText: 'Name'),
-//           ),
-//           TextField(
-//             controller: numberEditingController,
-//             onChanged: (editedNumber) {
-//               var editNumber = editedNumber;
-//             },
-//              decoration: InputDecoration(labelText: 'Nomor'),
-//           ),
-//                           ],
-//           ),
-//           actions: <Widget>[
-//             TextButton(
-//               child: Text('Simpan'),
-//               onPressed: () {
-//                 String editedName = nameEditingController.text;
-//                 var editedNumber = numberEditingController;
-//                 setState(() {
-//         dataKontak[index]['name'] = nameEditingController.text;
-//                   dataKontak[index]['phoneNumber'] = numberEditingController.text;
-//       });
-//                 Navigator.of(context).pop(); // Tutup dialog
-//               },
-//             ),
-//             TextButton(
-//               child: Text('Batal'),
-//               onPressed: () {
-//                 Navigator.of(context).pop(); // Tutup dialog
-//               },
-//             ),
-//           ],
-//         );
+//                                       title: Text('Edit Contact'),
+//                                       content: Column(
+//                                         mainAxisSize: MainAxisSize.min,
+//                                         children: [
+//                                           TextField(
+//                                             controller: nameEditingController,
+//                                             onChanged: (editedName) {
+//                                               var editName = editedName;
+//                                             },
+//                                             decoration: InputDecoration(labelText: 'Name'),
+//                                           ),
+//                                           TextField(
+//                                             controller: numberEditingController,
+//                                             onChanged: (editedNumber) {
+//                                               var editNumber = editedNumber;
+//                                             },
+//                                             decoration: InputDecoration(labelText: 'Nomor'),
+//                                           ),
+//                                         ],
+//                                       ),
+//                                       actions: <Widget>[
+//                                         TextButton(
+//                                           child: Text('Simpan'),
+//                                           onPressed: () {
+//                                             String editedName = nameEditingController.text;
+//                                             var editedNumber = numberEditingController;
+//                                             setState(() {
+//                                               dataKontak[index]['name'] = nameEditingController.text;
+//                                               dataKontak[index]['phoneNumber'] = numberEditingController.text;
+//                                             });
+//                                             Navigator.of(context).pop();
+//                                           },
+//                                           ),
+//                                           TextButton(
+//                                             child: Text('Batal'),
+//                                             onPressed: () {
+//                                               Navigator.of(context).pop(); // Tutup dialog
+//                                             },
+//                                           ),
+//                                         ],
+//                                       );
 //                                   });
-//                               print('edit $name');
-//                             }, 
+//                                   print('edit $name');
+//                               }, 
 //                             ),
 //                             IconButton(
-//             icon: Icon(Icons.delete),
-//             onPressed: () {
-//               showDialog(
-//                 context: context, 
-//                  builder: (BuildContext context) {
-//                   return AlertDialog(
-//                     title: Text('Konfirmasi Hapus'),
-//                     content: Text('Yakin ingin menghapus kontak ini?'),
-//                     actions: <Widget>[
-//                       TextButton(
-//                         onPressed: (){
-//                           setState(() {
-//                   dataKontak.removeAt(index);
-//                 });
-//                 Navigator.of(context).pop();
-//                         }, 
-//                         child: Text('Ya')),
-//                         TextButton(
-//                           child: Text('Batal'),
-//               onPressed: () {
-//                 Navigator.of(context).pop(); // Tutup dialog konfirmasi
-//               },
-//             ),
-//                     ],
-//                   );
-//                 });
-//             },
-//           ),
-//                           ],
-//                         ),
-//                       );
-//                     },
-//                   ),
-//                 )
+//                               icon: Icon(Icons.delete),
+//                               onPressed: () {
+//                                 showDialog(
+//                                   context: context, 
+//                                   builder: (BuildContext context) {
+//                                     return AlertDialog(
+//                                       title: Text('Konfirmasi Hapus'),
+//                                       content: Text('Yakin ingin menghapus kontak ini?'),
+//                                       actions: <Widget>[
+//                                         TextButton(
+//                                           onPressed: (){
+//                                             setState(() {
+//                                               dataKontak.removeAt(index);
+//                                             });
+//                                             Navigator.of(context).pop();
+//                                           }, 
+//                                           child: Text('Ya')),
+//                                           TextButton(
+//                                             child: Text('Batal'),
+//                                             onPressed: () {
+//                                               Navigator.of(context).pop(); // Tutup dialog konfirmasi
+//                                             },
+//                                           ),
+//                                         ],
+//                                       );
+//                                     });
+//                                   },
+//                                 ),
+//                               ],
+//                             ),
+//                           );
+//                         },
+//                       ),
+//                     )
+//                   ],
+//                 ),
 //               ],
-//             ),
-//                     ],
 //         ),
 //       ),
 //     );
