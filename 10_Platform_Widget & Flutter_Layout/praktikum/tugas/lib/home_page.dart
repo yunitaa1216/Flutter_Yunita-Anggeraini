@@ -19,7 +19,7 @@ class HomePage extends StatelessWidget {
 // Text('Tes Font', style: TextStyle(fontSize: 30, fontFamily: 'Rowdies'),),
 Text(
   'Tes Font', 
-  style: GoogleFonts.poppins(fontSize: 30),
+  style: GoogleFonts.fuggles(fontSize: 30),
   ),
 // Image(
 //   height: 150,

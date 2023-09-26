@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'home_page.dart';
-
+// import 'ui/screen/galeri.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Assets',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        // fontFamily: 'Rowdies',
+        fontFamily: 'Rowdies',
       ),
       home: const HomePage(),
     );
