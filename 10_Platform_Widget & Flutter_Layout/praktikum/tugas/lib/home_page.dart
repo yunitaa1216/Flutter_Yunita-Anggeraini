@@ -58,7 +58,6 @@ class HomePage extends StatelessWidget {
           ),
         ),
         drawer: Drawer(
-          // Isi drawer dengan menu atau konten yang sesuai kebutuhan Anda.
           child: ListView(
             padding: EdgeInsets.zero,
             children: <Widget>[
@@ -75,7 +74,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               ListTile(
-      title: Text('Galeri'), // Menambahkan item menu Galeri
+      title: Text('Galeri'),
       onTap: () {
         Navigator.push(
           context,
@@ -84,15 +83,14 @@ class HomePage extends StatelessWidget {
       },
     ),
      ListTile(
-      title: Text('Kontak'), // Menambahkan item menu Kontak
+      title: Text('Kontak'),
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => ContactPage()), // Arahkan ke halaman ContactPage
+          MaterialPageRoute(builder: (context) => ContactPage()),
         );
       },
     ),
-              // Tambahkan menu lainnya sesuai kebutuhan.
             ],
           ),
         ),

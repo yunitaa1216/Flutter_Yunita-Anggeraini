@@ -17,23 +17,21 @@ class GaleriPage extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                // Image
                 Image.asset(
                   imagePath,
-                  height: 200, // You can adjust the image height as needed
-                  fit: BoxFit.cover, // You can adjust the image fit as needed
+                  height: 200, 
+                  fit: BoxFit.cover, 
                 ),
-                SizedBox(height: 16), // Spacing
+                SizedBox(height: 16),
                 // Text and choices
                 Text(
                   'Ingin melihat detail gambar?',
                   style: TextStyle(fontSize: 18),
                 ),
-                SizedBox(height: 16), // Spacing
+                SizedBox(height: 16),
                 ListTile(
                   title: Text('Ya'),
                   onTap: () {
-                    // Navigasi ke halaman baru ketika "Ya" ditekan
                     Navigator.of(context).push(MaterialPageRoute(
                       builder: (BuildContext context) => NewPage(imagePath: imagePath,),
                     ));
@@ -42,7 +40,7 @@ class GaleriPage extends StatelessWidget {
                 ListTile(
                   title: Text('Tidak'),
                   onTap: () {
-                    Navigator.of(context).pop(); // Tutup bottom sheet jika "Tidak" ditekan
+                    Navigator.of(context).pop();
                   },
                 ),
               ],
@@ -64,13 +62,13 @@ class GaleriPage extends StatelessWidget {
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
-              _showBottomSheet(context, images[index]); // Berikan imagePath ke _showBottomSheet
+              _showBottomSheet(context, images[index]);
             },
             child: Card(
               elevation: 2.0,
               child: Image.asset(
                 images[index],
-                fit: BoxFit.cover, // Anda dapat menyesuaikan fit gambar sesuai kebutuhan
+                fit: BoxFit.cover,
               ),
             ),
           );
@@ -81,9 +79,8 @@ class GaleriPage extends StatelessWidget {
 }
 
 class NewPage extends StatelessWidget {
-  final String imagePath; // Tambahkan variabel imagePath
+  final String imagePath;
 
-  // Konstruktor untuk menginisialisasi imagePath
   NewPage({required this.imagePath});
 
   @override
@@ -96,14 +93,12 @@ class NewPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            // Tampilkan gambar dengan menggunakan imagePath yang diterima
             Image.asset(
               imagePath,
               height: 200,
               fit: BoxFit.cover,
             ),
             SizedBox(height: 16),
-            // Text('Ini adalah gambar yang Anda pilih.'),
           ],
         ),
       ),
