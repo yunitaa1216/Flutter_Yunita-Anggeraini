@@ -35,7 +35,7 @@ class GaleriPage extends StatelessWidget {
                   onTap: () {
                     // Navigasi ke halaman baru ketika "Ya" ditekan
                     Navigator.of(context).push(MaterialPageRoute(
-                      builder: (BuildContext context) => NewPage(),
+                      builder: (BuildContext context) => NewPage(imagePath: imagePath,),
                     ));
                   },
                 ),
@@ -81,14 +81,31 @@ class GaleriPage extends StatelessWidget {
 }
 
 class NewPage extends StatelessWidget {
+  final String imagePath; // Tambahkan variabel imagePath
+
+  // Konstruktor untuk menginisialisasi imagePath
+  NewPage({required this.imagePath});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Halaman Baru'),
+        title: Text('Detail Gambar'),
       ),
       body: Center(
-        child: Text('Ini adalah halaman baru'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            // Tampilkan gambar dengan menggunakan imagePath yang diterima
+            Image.asset(
+              imagePath,
+              height: 200,
+              fit: BoxFit.cover,
+            ),
+            SizedBox(height: 16),
+            // Text('Ini adalah gambar yang Anda pilih.'),
+          ],
+        ),
       ),
     );
   }
