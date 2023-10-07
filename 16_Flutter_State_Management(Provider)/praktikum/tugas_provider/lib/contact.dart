@@ -4,6 +4,15 @@ import 'package:intl/intl.dart';
 import 'package:file_picker/file_picker.dart';
 import 'dart:io';
 
+class Contact with ChangeNotifier {
+  List<Map<String, String>> _contact = [];
+  List<Map<String, String>> get contacts => _contact;
+  void add(Map<String, String> contact) {
+    _contact.add(contact);
+    notifyListeners();
+  }
+}
+
 class ContactPage extends StatefulWidget {
   @override
   _ContactPageState createState() => _ContactPageState();
