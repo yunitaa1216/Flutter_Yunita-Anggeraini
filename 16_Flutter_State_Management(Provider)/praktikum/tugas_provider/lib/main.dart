@@ -13,10 +13,6 @@ void main() {
       ],
       child: MyApp(),
       )
-    // ChangeNotifierProvider(
-    //   create: (context) => AppState(), // Create an instance of your AppState
-    //   child: const MyApp(),
-    // ),
   );
 }
 
