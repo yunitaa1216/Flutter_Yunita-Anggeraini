@@ -37,8 +37,8 @@ class _MyAppState extends State<MyApp> {
 
   void _logout() async {
   SharedPreferences prefs = await SharedPreferences.getInstance();
-  await prefs.remove('loggedIn'); // Hapus status login
-  await prefs.remove('username'); // Hapus username atau data lain yang perlu dihapus
+  await prefs.remove('loggedIn'); 
+  await prefs.remove('username');
 
   Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginPage()));
 }
@@ -63,7 +63,7 @@ class _MyAppState extends State<MyApp> {
   showDialog(
     context: context,
     builder: (BuildContext context) {
-      Color tempColor = _selectedColor; // Salin warna saat ini ke variabel sementara
+      Color tempColor = _selectedColor;
 
       return AlertDialog(
         title: Text('Pick a Color'),
@@ -97,7 +97,7 @@ class _MyAppState extends State<MyApp> {
 Future<void> _selectFile(BuildContext context) async {
     FilePickerResult? result = await FilePicker.platform.pickFiles(
       type: FileType.custom,
-      allowedExtensions: ['jpg'], // Filter hanya file JPG
+      allowedExtensions: ['jpg'],
     );
 
     if (result != null) {
@@ -105,7 +105,6 @@ Future<void> _selectFile(BuildContext context) async {
       _selectedFile = File(result.files.single.path!);
     });
 
-    // Tambahkan path file ke objek kontak terkait
     if (_selectedFile != null) {
       dataKontak.last['file'] = _selectedFile!.path;
     }
@@ -183,9 +182,9 @@ bool isPhoneNumberValid(String phoneNumber) {
     onPressed: () {},
   ),
   IconButton(
-    icon: Icon(Icons.logout), // Icon logout
+    icon: Icon(Icons.logout),
     onPressed: () {
-      _logout(); // Panggil fungsi _logout saat tombol logout ditekan
+      _logout();
     },
   ),
 ],
