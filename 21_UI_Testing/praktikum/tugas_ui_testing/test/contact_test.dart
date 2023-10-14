@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:tugas_ui_testing/contact.dart'; // Sesuaikan dengan lokasi berkas ContactPage
+import 'package:tugas_ui_testing/contact.dart';
 
 void main() {
   group('halaman contact', () {
@@ -16,12 +16,20 @@ void main() {
       expect(find.byType(TextField), findsNWidgets(2));
 
       expect(find.text("Submit"), findsOneWidget);
-    });
+
       expect(find.text('Name'), findsOneWidget);
       expect(find.text('Nomor'), findsOneWidget);
       expect(find.text('Date'), findsOneWidget);
       expect(find.text('Color'), findsOneWidget);
       expect(find.text('Pick File'), findsOneWidget);
+
+      final submitButton = find.text('Submit');
+      expect(submitButton, findsOneWidget);
+
+      final listTile = find.byType(ListTile);
+      expect(listTile, findsWidgets);
+    });
+
   });
 }
 
