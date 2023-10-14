@@ -1,0 +1,103 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:tugas_ui_testing/contact.dart'; // Sesuaikan dengan lokasi berkas ContactPage
+
+void main() {
+  group('halaman contact', () {
+    testWidgets('Widget Rendering Test', (WidgetTester widgetTester) async {
+      // Build our widget and trigger a frame.
+      await widgetTester.pumpWidget(MaterialApp(home: ContactPage()));
+
+      // Mengecek apakah terdapat AppBar dengan judul "Contacts"
+      expect(find.text("Contacts"), findsOneWidget);
+
+      // Mengecek apakah terdapat icon (gambar bebas)
+      expect(find.byIcon(Icons.contact_page_outlined), findsOneWidget);
+
+      // Mengecek apakah terdapat deskripsi (text bebas)
+      expect(find.text("Create New Contacts"), findsOneWidget);
+
+      // Mengecek apakah terdapat Title yang bertuliskan "Create New Contacts"
+      expect(find.text("Create New Contacts"), findsOneWidget);
+
+      // Mengecek apakah terdapat form input nama dan nomor telepon
+      expect(find.byType(TextField), findsNWidgets(2));
+
+      // Mengecek apakah terdapat tombol "Submit"
+      expect(find.text("Submit"), findsOneWidget);
+    });
+      //       expect(find.text('Name'), findsOneWidget);
+      expect(find.text('Nomor'), findsOneWidget);
+      expect(find.text('Date'), findsOneWidget);
+      expect(find.text('Color'), findsOneWidget);
+      expect(find.text('Pick File'), findsOneWidget);
+
+      expect(find.byType(TextField), findsWidgets);
+       final elevatedButton = find.widgetWithText(ElevatedButton, 'Submit');
+
+    // Periksa apakah ElevatedButton ada
+    expect(elevatedButton, findsOneWidget);
+      // Mengecek tombol 'Submit'
+      // final submitButton = find.text('Submit');
+      // expect(submitButton, findsOneWidget);
+
+      // Mengecek ListView yang menampilkan daftar kontak
+      final listTile = find.byType(ListTile);
+      expect(listTile, findsWidgets);
+      // Mengecek pesan kesalahan jika nama dan nomor tidak diisi
+      expect(find.text('Nama dan Nomor tidak boleh kosong.'), findsOneWidget);
+
+      // Mengecek apakah kontak baru ditambahkan
+      // expect(find.text('John Doe'), findsOneWidget);
+      // expect(find.text('1234567890'), findsOneWidget);
+    // Buat lebih banyak pengujian sesuai dengan kebutuhan Anda
+  });
+}
+
+// import 'package:flutter/material.dart';
+// import 'package:flutter_test/flutter_test.dart';
+// import 'package:tugas_ui_testing/contact.dart';
+
+// void main() {
+//   group('Contact Page', () {
+//     testWidgets('Widget Rendering Test', (WidgetTester tester) async {
+//       await tester.pumpWidget(MaterialApp(home: ContactPage()));
+
+//       // Mengecek apakah widget utama telah dirender dengan benar
+//       expect(find.text('Contacts'), findsOneWidget);
+//       expect(find.text('Create New Contacts'), findsOneWidget);
+//       expect(find.text('Name'), findsOneWidget);
+//       expect(find.text('Nomor'), findsOneWidget);
+//       expect(find.text('Date'), findsOneWidget);
+//       expect(find.text('Color'), findsOneWidget);
+//       expect(find.text('Pick File'), findsOneWidget);
+
+//       // Mengecek tombol 'Submit'
+//       final submitButton = find.text('Submit');
+//       expect(submitButton, findsOneWidget);
+
+//       // Mengecek ListView yang menampilkan daftar kontak
+//       final listTile = find.byType(ListTile);
+//       expect(listTile, findsWidgets);
+
+//       // Menjalankan interaksi pengguna pada halaman
+//       await tester.tap(submitButton);
+//       await tester.pump();
+
+//       // Mengecek pesan kesalahan jika nama dan nomor tidak diisi
+//       expect(find.text('Nama dan Nomor tidak boleh kosong.'), findsOneWidget);
+
+//       // Memasukkan nilai ke dalam field nama dan nomor
+//       await tester.enterText(find.byType(TextField).at(0), 'John Doe');
+//       await tester.enterText(find.byType(TextField).at(1), '1234567890');
+
+//       // Menekan tombol 'Submit' kembali
+//       await tester.tap(submitButton);
+//       await tester.pump();
+
+//       // Mengecek apakah kontak baru ditambahkan
+//       expect(find.text('John Doe'), findsOneWidget);
+//       expect(find.text('1234567890'), findsOneWidget);
+//     });
+//   });
+// }
