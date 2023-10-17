@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/Weekly1/project/tugas_yunita/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Weekly1/project/tugas_yunita/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Weekly1/project/tugas_yunita/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/15_Flutter_Navigation/praktikum/assets_bottomsheet_navigation/build" />
+      <excludeFolder url="file://$MODULE_DIR$/15_Flutter_Navigation/praktikum/assets_bottomsheet_navigation/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/15_Flutter_Navigation/praktikum/assets_bottomsheet_navigation/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/21_UI_Testing/praktikum/tugas_ui_testing/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/21_UI_Testing/praktikum/tugas_ui_testing/build" />
+      <excludeFolder url="file://$MODULE_DIR$/21_UI_Testing/praktikum/tugas_ui_testing/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/14_Dialog_Bottom_Sheet/praktikum/assets_bottomsheet_navigation/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/14_Dialog_Bottom_Sheet/praktikum/assets_bottomsheet_navigation/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/14_Dialog_Bottom_Sheet/praktikum/assets_bottomsheet_navigation/build" />
+      <excludeFolder url="file://$MODULE_DIR$/16_Flutter_State_Management(Provider)/praktikum/latihan copy/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/16_Flutter_State_Management(Provider)/praktikum/latihan copy/build" />
+      <excludeFolder url="file://$MODULE_DIR$/16_Flutter_State_Management(Provider)/praktikum/latihan copy/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/14_Dialog_Bottom_Sheet/praktikum/latihan/latihan/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/14_Dialog_Bottom_Sheet/praktikum/latihan/latihan/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/14_Dialog_Bottom_Sheet/praktikum/latihan/latihan/build" />
+      <excludeFolder url="file://$MODULE_DIR$/08_Introduction_Flutter_Widget/praktikum/latihan/yunita/lib/yunita_baru/build" />
+      <excludeFolder url="file://$MODULE_DIR$/08_Introduction_Flutter_Widget/praktikum/latihan/yunita/lib/yunita_baru/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/08_Introduction_Flutter_Widget/praktikum/latihan/yunita/lib/yunita_baru/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/22_Perkenalan_AI_OpenAI_Flutter/praktikum/tes_project/build" />
+      <excludeFolder url="file://$MODULE_DIR$/22_Perkenalan_AI_OpenAI_Flutter/praktikum/tes_project/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/22_Perkenalan_AI_OpenAI_Flutter/praktikum/tes_project/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/18_Storage/praktikum/tugas_storage/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/18_Storage/praktikum/tugas_storage/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/18_Storage/praktikum/tugas_storage/build" />
+      <excludeFolder url="file://$MODULE_DIR$/20_MVVM_Architecture/praktikum/tugas_mvvm/build" />
+      <excludeFolder url="file://$MODULE_DIR$/20_MVVM_Architecture/praktikum/tugas_mvvm/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/20_MVVM_Architecture/praktikum/tugas_mvvm/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/16_Flutter_State_Management(Provider)/praktikum/latihan/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/16_Flutter_State_Management(Provider)/praktikum/latihan/build" />
+      <excludeFolder url="file://$MODULE_DIR$/16_Flutter_State_Management(Provider)/praktikum/latihan/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/19_Introduction_REST_API_JSON/praktikum/latihan/build" />
+      <excludeFolder url="file://$MODULE_DIR$/19_Introduction_REST_API_JSON/praktikum/latihan/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/19_Introduction_REST_API_JSON/praktikum/latihan/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/19_Introduction_REST_API_JSON/praktikum/tugas_api/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/19_Introduction_REST_API_JSON/praktikum/tugas_api/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/19_Introduction_REST_API_JSON/praktikum/tugas_api/build" />
+      <excludeFolder url="file://$MODULE_DIR$/10_Platform_Widget &amp; Flutter_Layout/praktikum/tugas/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/10_Platform_Widget &amp; Flutter_Layout/praktikum/tugas/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/10_Platform_Widget &amp; Flutter_Layout/praktikum/tugas/build" />
+      <excludeFolder url="file://$MODULE_DIR$/16_Flutter_State_Management(Provider)/praktikum/tugas_provider/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/16_Flutter_State_Management(Provider)/praktikum/tugas_provider/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/16_Flutter_State_Management(Provider)/praktikum/tugas_provider/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Weekly2/project/tugas_yunita/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Weekly2/project/tugas_yunita/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Weekly2/project/tugas_yunita/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/13_Assets/praktikum/assets_bottomsheet_navigation/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/13_Assets/praktikum/assets_bottomsheet_navigation/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/13_Assets/praktikum/assets_bottomsheet_navigation/build" />
+      <excludeFolder url="file://$MODULE_DIR$/08_Introduction_Flutter_Widget/praktikum/latihan/yunita/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/08_Introduction_Flutter_Widget/praktikum/latihan/yunita/build" />
+      <excludeFolder url="file://$MODULE_DIR$/08_Introduction_Flutter_Widget/praktikum/latihan/yunita/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/08_Introduction_Flutter_Widget/praktikum/latihan/yunita/tes/build" />
+      <excludeFolder url="file://$MODULE_DIR$/08_Introduction_Flutter_Widget/praktikum/latihan/yunita/tes/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/08_Introduction_Flutter_Widget/praktikum/latihan/yunita/tes/.pub" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
