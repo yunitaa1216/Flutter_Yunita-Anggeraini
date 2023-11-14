@@ -14,7 +14,7 @@ class _ChatBotPageState extends State<ChatBotPage> {
   bool _isLoading = false;
 
   Future<String> _getSmartphoneRecommendation(double price, int cameraMP, int storageGB) async {
-    const apiKey = "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"; // Ganti dengan API key OpenAI Anda
+    const apiKey = "";
     const model = "text-davinci-003";
 
     var url = Uri.https("api.openai.com", "/v1/completions");
